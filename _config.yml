@@ -1,5 +1,12 @@
-title: arXiv Harvester — M1 và M2
+title: arXiv Harvester — Milestone 1 và 2
 author: Nhóm arXiv Harvester
+repository:
+  url: https://github.com/NguyenQuocDat06-AI/arxiv-harvester-book
+  branch: main
+html:
+  use_repository_button: true
+  use_edit_page_button: true
+  extra_css: [report.css]
 execute:
   execute_notebooks: force
   allow_errors: false
@@ -9,3 +16,4 @@ sphinx:
     language: vi
     exclude_patterns: [_build, README.md, '**.ipynb_checkpoints']
     nb_execution_raise_on_error: true
+    html_static_path: [_static]

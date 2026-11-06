@@ -1320,10 +1320,10 @@
       }
     ],
     "diagnostic_categories": {
-      "Include chưa hỗ trợ": 4,
-      "Bibliography thiếu hoặc không đọc được": 22,
-      "Môi trường TeX chưa hỗ trợ đầy đủ": 3,
       "Citation chưa resolve": 31,
+      "Bibliography thiếu hoặc không đọc được": 22,
+      "Include chưa hỗ trợ": 4,
+      "Môi trường TeX chưa hỗ trợ đầy đủ": 3,
       "Compilation root mơ hồ": 1,
       "Thiếu source": 1
     },
@@ -1458,6 +1458,216 @@
       }
     },
     "final_output_bytes": 13348887,
-    "avg_sec_per_publication": 1.9596164383561643
+    "avg_sec_per_publication": 1.9596164383561643,
+    "resource_profile": {
+      "window_sec": 5.0,
+      "rss_samples": 384,
+      "disk_samples": 30,
+      "rows": [
+        {
+          "window_start_sec": 0.0,
+          "window_end_sec": 5.0,
+          "rss_sample_mean_mib": 65.448046875,
+          "rss_peak_mib": 73.3515625,
+          "disk_peak_bytes": 0
+        },
+        {
+          "window_start_sec": 5.0,
+          "window_end_sec": 10.0,
+          "rss_sample_mean_mib": 111.405078125,
+          "rss_peak_mib": 112.53125,
+          "disk_peak_bytes": 614551
+        },
+        {
+          "window_start_sec": 10.0,
+          "window_end_sec": 15.0,
+          "rss_sample_mean_mib": 114.21142578125,
+          "rss_peak_mib": 117.1015625,
+          "disk_peak_bytes": 4701665
+        },
+        {
+          "window_start_sec": 15.0,
+          "window_end_sec": 20.0,
+          "rss_sample_mean_mib": 120.14820772058823,
+          "rss_peak_mib": 121.609375,
+          "disk_peak_bytes": 10055227
+        },
+        {
+          "window_start_sec": 20.0,
+          "window_end_sec": 25.0,
+          "rss_sample_mean_mib": 121.7369140625,
+          "rss_peak_mib": 123.046875,
+          "disk_peak_bytes": 16112756
+        },
+        {
+          "window_start_sec": 25.0,
+          "window_end_sec": 30.0,
+          "rss_sample_mean_mib": 118.68250868055556,
+          "rss_peak_mib": 119.5546875,
+          "disk_peak_bytes": 20927876
+        },
+        {
+          "window_start_sec": 30.0,
+          "window_end_sec": 35.0,
+          "rss_sample_mean_mib": 121.6509650735294,
+          "rss_peak_mib": 123.02734375,
+          "disk_peak_bytes": 25821348
+        },
+        {
+          "window_start_sec": 35.0,
+          "window_end_sec": 40.0,
+          "rss_sample_mean_mib": 123.52008928571429,
+          "rss_peak_mib": 124.71484375,
+          "disk_peak_bytes": 30205642
+        },
+        {
+          "window_start_sec": 40.0,
+          "window_end_sec": 45.0,
+          "rss_sample_mean_mib": 125.2607421875,
+          "rss_peak_mib": 126.984375,
+          "disk_peak_bytes": 35525566
+        },
+        {
+          "window_start_sec": 45.0,
+          "window_end_sec": 50.0,
+          "rss_sample_mean_mib": 125.5,
+          "rss_peak_mib": 127.36328125,
+          "disk_peak_bytes": 35525566
+        },
+        {
+          "window_start_sec": 50.0,
+          "window_end_sec": 55.0,
+          "rss_sample_mean_mib": 124.9482421875,
+          "rss_peak_mib": 126.06640625,
+          "disk_peak_bytes": 35525566
+        },
+        {
+          "window_start_sec": 55.0,
+          "window_end_sec": 60.0,
+          "rss_sample_mean_mib": 125.60498046875,
+          "rss_peak_mib": 126.1796875,
+          "disk_peak_bytes": 35525566
+        },
+        {
+          "window_start_sec": 60.0,
+          "window_end_sec": 65.0,
+          "rss_sample_mean_mib": 125.2880859375,
+          "rss_peak_mib": 126.15625,
+          "disk_peak_bytes": 35525566
+        },
+        {
+          "window_start_sec": 65.0,
+          "window_end_sec": 70.0,
+          "rss_sample_mean_mib": 127.19587053571429,
+          "rss_peak_mib": 128.75,
+          "disk_peak_bytes": 35525566
+        },
+        {
+          "window_start_sec": 70.0,
+          "window_end_sec": 75.0,
+          "rss_sample_mean_mib": 127.12841796875,
+          "rss_peak_mib": 129.41015625,
+          "disk_peak_bytes": 35525566
+        },
+        {
+          "window_start_sec": 75.0,
+          "window_end_sec": 80.0,
+          "rss_sample_mean_mib": 126.08349609375,
+          "rss_peak_mib": 127.3671875,
+          "disk_peak_bytes": 35525566
+        },
+        {
+          "window_start_sec": 80.0,
+          "window_end_sec": 85.0,
+          "rss_sample_mean_mib": 125.90087890625,
+          "rss_peak_mib": 126.4375,
+          "disk_peak_bytes": 35525566
+        },
+        {
+          "window_start_sec": 85.0,
+          "window_end_sec": 90.0,
+          "rss_sample_mean_mib": 125.70256696428571,
+          "rss_peak_mib": 126.328125,
+          "disk_peak_bytes": 35525566
+        },
+        {
+          "window_start_sec": 90.0,
+          "window_end_sec": 95.0,
+          "rss_sample_mean_mib": 125.6728515625,
+          "rss_peak_mib": 126.42578125,
+          "disk_peak_bytes": 35525566
+        },
+        {
+          "window_start_sec": 95.0,
+          "window_end_sec": 100.0,
+          "rss_sample_mean_mib": 123.58110119047619,
+          "rss_peak_mib": 131.78125,
+          "disk_peak_bytes": 43272803
+        },
+        {
+          "window_start_sec": 100.0,
+          "window_end_sec": 105.0,
+          "rss_sample_mean_mib": 121.285400390625,
+          "rss_peak_mib": 121.8671875,
+          "disk_peak_bytes": 47087726
+        },
+        {
+          "window_start_sec": 105.0,
+          "window_end_sec": 110.0,
+          "rss_sample_mean_mib": 124.49330357142857,
+          "rss_peak_mib": 125.61328125,
+          "disk_peak_bytes": 53635561
+        },
+        {
+          "window_start_sec": 110.0,
+          "window_end_sec": 115.0,
+          "rss_sample_mean_mib": 125.58365885416667,
+          "rss_peak_mib": 125.6015625,
+          "disk_peak_bytes": 57625463
+        },
+        {
+          "window_start_sec": 115.0,
+          "window_end_sec": 120.0,
+          "rss_sample_mean_mib": 124.59765625,
+          "rss_peak_mib": 125.94921875,
+          "disk_peak_bytes": 62557942
+        },
+        {
+          "window_start_sec": 120.0,
+          "window_end_sec": 125.0,
+          "rss_sample_mean_mib": 124.9765625,
+          "rss_peak_mib": 125.00390625,
+          "disk_peak_bytes": null
+        },
+        {
+          "window_start_sec": 125.0,
+          "window_end_sec": 130.0,
+          "rss_sample_mean_mib": 124.05859375,
+          "rss_peak_mib": 125.9296875,
+          "disk_peak_bytes": 65929723
+        },
+        {
+          "window_start_sec": 130.0,
+          "window_end_sec": 135.0,
+          "rss_sample_mean_mib": 124.41324869791667,
+          "rss_peak_mib": 128.828125,
+          "disk_peak_bytes": 71377077
+        },
+        {
+          "window_start_sec": 135.0,
+          "window_end_sec": 140.0,
+          "rss_sample_mean_mib": 124.84029447115384,
+          "rss_peak_mib": 125.99609375,
+          "disk_peak_bytes": 75978612
+        },
+        {
+          "window_start_sec": 140.0,
+          "window_end_sec": 143.052,
+          "rss_sample_mean_mib": 131.6154296875,
+          "rss_peak_mib": 152.72265625,
+          "disk_peak_bytes": 129078695
+        }
+      ]
+    }
   }
 }

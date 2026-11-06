@@ -1,0 +1,6 @@
+.bd-article-container { max-width: 58rem; }
+.bd-article h1 { line-height: 1.25; }
+.bd-article p, .bd-article li { line-height: 1.7; }
+.dataframe { font-size: .9rem; }
+.dataframe th, .dataframe td { padding: .55rem .7rem; }
+.cell_output { margin: .8rem 0 1.6rem; }
