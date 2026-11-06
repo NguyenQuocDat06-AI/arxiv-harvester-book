@@ -1,0 +1,1451 @@
+{
+  "report_date": "2026-11-06",
+  "scope": {
+    "papers": 73,
+    "versions": 119,
+    "group_assigned": 25000,
+    "member_assigned": 5000,
+    "checkpoint_reported_ids": 2217,
+    "archives_used": 8,
+    "selection": "Các lô mới nhất dưới 8 MiB; không chọn theo parser success và không khôi phục toàn chuỗi."
+  },
+  "m1": {
+    "version_histogram": {
+      "3": 8,
+      "4": 3,
+      "1": 41,
+      "2": 21
+    },
+    "version_status": {
+      "success": 113,
+      "pdf_only": 5,
+      "error": 1
+    },
+    "source_audit": {
+      "tex_verified": 113,
+      "empty_verified": 5,
+      "source_pending_or_failed": 1
+    },
+    "source_verified": 118,
+    "metadata_missing_fraction": {
+      "title": 0.0,
+      "authors": 0.0,
+      "published": 0.0,
+      "doi": 0.7123287671232876,
+      "venue": 0.8082191780821918
+    },
+    "references_missing_fraction": {
+      "ref_arxiv_id": 0.3993993993993994,
+      "ref_title": 0.0,
+      "ref_authors": 0.04804804804804805,
+      "ref_submission_date": 0.14714714714714713,
+      "ref_s2_id": 0.04804804804804805
+    },
+    "reference_status": {
+      "success": 6,
+      "empty": 4,
+      "api_error": 63
+    },
+    "working_reference_rows": 333,
+    "arxiv_reference_rows": 200,
+    "verified_reference_papers": 10,
+    "mean_references_verified_papers": 33.3,
+    "eligible_size_papers": 67,
+    "mean_before_bytes": 7596948.417910447,
+    "mean_after_bytes": 229111.49253731343,
+    "source_reduction": 0.9698416416784976,
+    "schemas": {
+      "papers": [
+        {
+          "column": "arxiv_id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "column": "title",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "column": "authors",
+          "type": "list<element: string>",
+          "nullable": true
+        },
+        {
+          "column": "submission_date",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "column": "revised_dates",
+          "type": "list<element: string>",
+          "nullable": true
+        },
+        {
+          "column": "venue",
+          "type": "string",
+          "nullable": true
+        }
+      ],
+      "references": [
+        {
+          "column": "arxiv_id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "column": "ref_arxiv_id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "column": "ref_title",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "column": "ref_authors",
+          "type": "list<element: string>",
+          "nullable": true
+        },
+        {
+          "column": "ref_submission_date",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "column": "ref_s2_id",
+          "type": "string",
+          "nullable": true
+        }
+      ]
+    }
+  },
+  "m2": {
+    "status_counts": {
+      "partial": 31,
+      "success": 81,
+      "empty_no_tex": 5,
+      "error": 1,
+      "error_missing_source": 1
+    },
+    "deduplication": {
+      "elements": {
+        "before": 76332,
+        "after": 47037,
+        "reduction_rate": 0.3837839962270083
+      },
+      "bibtex": {
+        "before": 4361,
+        "after": 2676,
+        "reduction_rate": 0.3863792708094474
+      }
+    },
+    "unresolved_cites": 1035,
+    "bibliography_conflicts": 114,
+    "coverage": [
+      {
+        "paper": "P001",
+        "expected_versions": 3,
+        "recorded_versions": 3,
+        "statuses": {
+          "partial": 3
+        },
+        "versions_with_tex": 3,
+        "success_versions": 0,
+        "partial_versions": 3,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 0.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P002",
+        "expected_versions": 4,
+        "recorded_versions": 4,
+        "statuses": {
+          "success": 4
+        },
+        "versions_with_tex": 4,
+        "success_versions": 4,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P003",
+        "expected_versions": 3,
+        "recorded_versions": 3,
+        "statuses": {
+          "partial": 3
+        },
+        "versions_with_tex": 3,
+        "success_versions": 0,
+        "partial_versions": 3,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 0.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P004",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "partial": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 0,
+        "partial_versions": 1,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 0.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P005",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P006",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P007",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P008",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "partial": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 0,
+        "partial_versions": 1,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 0.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P009",
+        "expected_versions": 2,
+        "recorded_versions": 2,
+        "statuses": {
+          "success": 2
+        },
+        "versions_with_tex": 2,
+        "success_versions": 2,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P010",
+        "expected_versions": 2,
+        "recorded_versions": 2,
+        "statuses": {
+          "success": 1,
+          "partial": 1
+        },
+        "versions_with_tex": 2,
+        "success_versions": 1,
+        "partial_versions": 1,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 0.5,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P011",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P012",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P013",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P014",
+        "expected_versions": 3,
+        "recorded_versions": 3,
+        "statuses": {
+          "success": 3
+        },
+        "versions_with_tex": 3,
+        "success_versions": 3,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P015",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "partial": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 0,
+        "partial_versions": 1,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 0.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P016",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P017",
+        "expected_versions": 2,
+        "recorded_versions": 2,
+        "statuses": {
+          "partial": 1,
+          "success": 1
+        },
+        "versions_with_tex": 2,
+        "success_versions": 1,
+        "partial_versions": 1,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 0.5,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P018",
+        "expected_versions": 4,
+        "recorded_versions": 4,
+        "statuses": {
+          "success": 4
+        },
+        "versions_with_tex": 4,
+        "success_versions": 4,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P019",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "empty_no_tex": 1
+        },
+        "versions_with_tex": 0,
+        "success_versions": 0,
+        "partial_versions": 0,
+        "empty_versions": 1,
+        "error_versions": 0,
+        "parsed_version_coverage": 0.0,
+        "successful_version_coverage": 0.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P020",
+        "expected_versions": 2,
+        "recorded_versions": 2,
+        "statuses": {
+          "partial": 2
+        },
+        "versions_with_tex": 2,
+        "success_versions": 0,
+        "partial_versions": 2,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 0.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P021",
+        "expected_versions": 2,
+        "recorded_versions": 2,
+        "statuses": {
+          "success": 2
+        },
+        "versions_with_tex": 2,
+        "success_versions": 2,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P022",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P023",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P024",
+        "expected_versions": 2,
+        "recorded_versions": 2,
+        "statuses": {
+          "partial": 2
+        },
+        "versions_with_tex": 2,
+        "success_versions": 0,
+        "partial_versions": 2,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 0.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P025",
+        "expected_versions": 2,
+        "recorded_versions": 2,
+        "statuses": {
+          "partial": 2
+        },
+        "versions_with_tex": 2,
+        "success_versions": 0,
+        "partial_versions": 2,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 0.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P026",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P027",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P028",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P029",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P030",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P031",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "partial": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 0,
+        "partial_versions": 1,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 0.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P032",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "partial": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 0,
+        "partial_versions": 1,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 0.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P033",
+        "expected_versions": 3,
+        "recorded_versions": 3,
+        "statuses": {
+          "success": 3
+        },
+        "versions_with_tex": 3,
+        "success_versions": 3,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P034",
+        "expected_versions": 2,
+        "recorded_versions": 2,
+        "statuses": {
+          "partial": 2
+        },
+        "versions_with_tex": 2,
+        "success_versions": 0,
+        "partial_versions": 2,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 0.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P035",
+        "expected_versions": 3,
+        "recorded_versions": 3,
+        "statuses": {
+          "success": 3
+        },
+        "versions_with_tex": 3,
+        "success_versions": 3,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P036",
+        "expected_versions": 2,
+        "recorded_versions": 2,
+        "statuses": {
+          "success": 2
+        },
+        "versions_with_tex": 2,
+        "success_versions": 2,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P037",
+        "expected_versions": 2,
+        "recorded_versions": 2,
+        "statuses": {
+          "success": 2
+        },
+        "versions_with_tex": 2,
+        "success_versions": 2,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P038",
+        "expected_versions": 2,
+        "recorded_versions": 2,
+        "statuses": {
+          "success": 2
+        },
+        "versions_with_tex": 2,
+        "success_versions": 2,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P039",
+        "expected_versions": 4,
+        "recorded_versions": 4,
+        "statuses": {
+          "success": 4
+        },
+        "versions_with_tex": 4,
+        "success_versions": 4,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P040",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "empty_no_tex": 1
+        },
+        "versions_with_tex": 0,
+        "success_versions": 0,
+        "partial_versions": 0,
+        "empty_versions": 1,
+        "error_versions": 0,
+        "parsed_version_coverage": 0.0,
+        "successful_version_coverage": 0.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P041",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P042",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P043",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P044",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P045",
+        "expected_versions": 2,
+        "recorded_versions": 2,
+        "statuses": {
+          "success": 2
+        },
+        "versions_with_tex": 2,
+        "success_versions": 2,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P046",
+        "expected_versions": 2,
+        "recorded_versions": 2,
+        "statuses": {
+          "success": 2
+        },
+        "versions_with_tex": 2,
+        "success_versions": 2,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P047",
+        "expected_versions": 2,
+        "recorded_versions": 2,
+        "statuses": {
+          "partial": 2
+        },
+        "versions_with_tex": 2,
+        "success_versions": 0,
+        "partial_versions": 2,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 0.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P048",
+        "expected_versions": 2,
+        "recorded_versions": 2,
+        "statuses": {
+          "success": 2
+        },
+        "versions_with_tex": 2,
+        "success_versions": 2,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P049",
+        "expected_versions": 2,
+        "recorded_versions": 2,
+        "statuses": {
+          "success": 2
+        },
+        "versions_with_tex": 2,
+        "success_versions": 2,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P050",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "empty_no_tex": 1
+        },
+        "versions_with_tex": 0,
+        "success_versions": 0,
+        "partial_versions": 0,
+        "empty_versions": 1,
+        "error_versions": 0,
+        "parsed_version_coverage": 0.0,
+        "successful_version_coverage": 0.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P051",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P052",
+        "expected_versions": 3,
+        "recorded_versions": 3,
+        "statuses": {
+          "success": 3
+        },
+        "versions_with_tex": 3,
+        "success_versions": 3,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P053",
+        "expected_versions": 3,
+        "recorded_versions": 3,
+        "statuses": {
+          "partial": 3
+        },
+        "versions_with_tex": 3,
+        "success_versions": 0,
+        "partial_versions": 3,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 0.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P054",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P055",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "empty_no_tex": 1
+        },
+        "versions_with_tex": 0,
+        "success_versions": 0,
+        "partial_versions": 0,
+        "empty_versions": 1,
+        "error_versions": 0,
+        "parsed_version_coverage": 0.0,
+        "successful_version_coverage": 0.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P056",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P057",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P058",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P059",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P060",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P061",
+        "expected_versions": 3,
+        "recorded_versions": 3,
+        "statuses": {
+          "success": 3
+        },
+        "versions_with_tex": 3,
+        "success_versions": 3,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P062",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P063",
+        "expected_versions": 2,
+        "recorded_versions": 2,
+        "statuses": {
+          "partial": 2
+        },
+        "versions_with_tex": 2,
+        "success_versions": 0,
+        "partial_versions": 2,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 0.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P064",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "error": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 0,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 1,
+        "parsed_version_coverage": 0.0,
+        "successful_version_coverage": 0.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P065",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P066",
+        "expected_versions": 2,
+        "recorded_versions": 2,
+        "statuses": {
+          "partial": 2
+        },
+        "versions_with_tex": 2,
+        "success_versions": 0,
+        "partial_versions": 2,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 0.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P067",
+        "expected_versions": 2,
+        "recorded_versions": 2,
+        "statuses": {
+          "success": 2
+        },
+        "versions_with_tex": 2,
+        "success_versions": 2,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P068",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P069",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "success": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P070",
+        "expected_versions": 2,
+        "recorded_versions": 2,
+        "statuses": {
+          "success": 2
+        },
+        "versions_with_tex": 2,
+        "success_versions": 2,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 1.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P071",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "partial": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 0,
+        "partial_versions": 1,
+        "empty_versions": 0,
+        "error_versions": 0,
+        "parsed_version_coverage": 1.0,
+        "successful_version_coverage": 0.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P072",
+        "expected_versions": 1,
+        "recorded_versions": 1,
+        "statuses": {
+          "empty_no_tex": 1
+        },
+        "versions_with_tex": 0,
+        "success_versions": 0,
+        "partial_versions": 0,
+        "empty_versions": 1,
+        "error_versions": 0,
+        "parsed_version_coverage": 0.0,
+        "successful_version_coverage": 0.0,
+        "version_coverage": 1.0
+      },
+      {
+        "paper": "P073",
+        "expected_versions": 2,
+        "recorded_versions": 2,
+        "statuses": {
+          "success": 1,
+          "error_missing_source": 1
+        },
+        "versions_with_tex": 1,
+        "success_versions": 1,
+        "partial_versions": 0,
+        "empty_versions": 0,
+        "error_versions": 1,
+        "parsed_version_coverage": 0.5,
+        "successful_version_coverage": 0.5,
+        "version_coverage": 1.0
+      }
+    ],
+    "diagnostic_categories": {
+      "Citation chưa resolve": 31,
+      "Include chưa hỗ trợ": 4,
+      "Bibliography thiếu hoặc không đọc được": 22,
+      "Môi trường TeX chưa hỗ trợ đầy đủ": 3,
+      "Compilation root mơ hồ": 1,
+      "Thiếu source": 1
+    },
+    "rows": {
+      "elements": 47037,
+      "hierarchy": 74992,
+      "bibtex": 2676
+    },
+    "structural_valid": true,
+    "processing_complete": false
+  },
+  "crawler_measurement": {
+    "status": "paused_rate_limit",
+    "runtime_sec": 261.958,
+    "child_wall_sec": 263.652,
+    "processed_papers": 14,
+    "environment": {
+      "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+      "python_version": "3.13.18",
+      "is_google_colab": true,
+      "cpu_only": true,
+      "cpu_count_logical": 2,
+      "total_memory_mb": 12975.52,
+      "library_versions": {
+        "psutil": "5.9.5",
+        "pandas": "2.2.3",
+        "pyarrow": "23.0.1",
+        "requests": "2.32.4"
+      }
+    },
+    "memory": {
+      "peak_rss_mb": 140.3,
+      "avg_rss_mb": 89.26,
+      "num_samples": 568,
+      "sample_interval_sec": 0.5
+    },
+    "disk": {
+      "peak_bytes": 36999671,
+      "final_bytes": 20852232,
+      "method": "periodic samples and operation checkpoints; nested directories counted once",
+      "sample_interval_sec": null
+    },
+    "phases": {
+      "drive_backup": {
+        "elapsed_sec": 0.65,
+        "calls": 3
+      },
+      "id_generation": {
+        "elapsed_sec": 53.396,
+        "calls": 1
+      },
+      "references": {
+        "elapsed_sec": 196.287,
+        "calls": 15
+      },
+      "download_clean": {
+        "elapsed_sec": 9.928,
+        "calls": 3
+      },
+      "storage": {
+        "elapsed_sec": 0.459,
+        "calls": 15
+      },
+      "discovery": {
+        "elapsed_sec": 0.355,
+        "calls": 1
+      },
+      "export": {
+        "elapsed_sec": 0.124,
+        "calls": 1
+      }
+    },
+    "assigned_ids": 5000,
+    "intervals": {
+      "rate_limit_sec": 3.0,
+      "source_rate_limit_sec": 1.0,
+      "s2_rate_limit_sec": 5.0
+    }
+  },
+  "parser_measurement": {
+    "status": "completed_with_errors",
+    "runtime_sec": 143.052,
+    "child_wall_sec": null,
+    "processed_papers": 73,
+    "environment": {
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python_version": "3.12.0",
+      "is_google_colab": false,
+      "cpu_only": true,
+      "cpu_count_logical": 12,
+      "total_memory_mb": 16163.3,
+      "library_versions": {
+        "psutil": "7.2.2",
+        "pandas": "2.3.3",
+        "pyarrow": "23.0.1",
+        "requests": "2.32.5"
+      }
+    },
+    "memory": {
+      "peak_rss_mb": 152.72,
+      "avg_rss_mb": 121.62,
+      "num_samples": 384,
+      "sample_interval_sec": 0.5
+    },
+    "disk": {
+      "peak_bytes": 129078695,
+      "final_bytes": 83183049,
+      "method": "periodic samples and operation checkpoints; nested directories counted once",
+      "sample_interval_sec": 5.0
+    },
+    "phases": {
+      "parse_publication": {
+        "elapsed_sec": 133.574,
+        "calls": 73
+      },
+      "storage": {
+        "elapsed_sec": 3.19,
+        "calls": 73
+      },
+      "validation": {
+        "elapsed_sec": 1.515,
+        "calls": 1
+      }
+    },
+    "final_output_bytes": 13348887,
+    "avg_sec_per_publication": 1.9596164383561643
+  }
+}

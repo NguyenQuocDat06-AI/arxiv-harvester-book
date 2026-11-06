@@ -1,0 +1,11 @@
+title: arXiv Harvester — M1 và M2
+author: Nhóm arXiv Harvester
+execute:
+  execute_notebooks: force
+  allow_errors: false
+  timeout: 600
+sphinx:
+  config:
+    language: vi
+    exclude_patterns: [_build, README.md, '**.ipynb_checkpoints']
+    nb_execution_raise_on_error: true

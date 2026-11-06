@@ -1,0 +1,15 @@
+format: jb-book
+root: index
+parts:
+  - caption: Milestone 1 — Crawling
+    chapters:
+      - file: chapters/01_discovery_and_versions
+      - file: chapters/02_source_download_and_cleaning
+      - file: chapters/03_reference_extraction
+      - file: chapters/04_schema_and_data_quality
+      - file: chapters/05_performance_benchmark
+  - caption: Milestone 2 — Parsing
+    chapters:
+      - file: chapters/06_parsing_and_hierarchy
+      - file: chapters/07_standardization_and_deduplication
+      - file: chapters/08_parser_benchmark
