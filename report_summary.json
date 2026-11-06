@@ -1320,10 +1320,10 @@
       }
     ],
     "diagnostic_categories": {
-      "Citation chưa resolve": 31,
-      "Bibliography thiếu hoặc không đọc được": 22,
       "Include chưa hỗ trợ": 4,
       "Môi trường TeX chưa hỗ trợ đầy đủ": 3,
+      "Citation chưa resolve": 31,
+      "Bibliography thiếu hoặc không đọc được": 22,
       "Compilation root mơ hồ": 1,
       "Thiếu source": 1
     },
@@ -1668,6 +1668,66 @@
           "disk_peak_bytes": 129078695
         }
       ]
+    }
+  },
+  "session_measurements": {
+    "M1": {
+      "sessions": [
+        {
+          "session": "S1",
+          "status": "paused_rate_limit",
+          "colab_cpu": true,
+          "processed_attempts": 14,
+          "publications_reused": null,
+          "versions_reused": 19,
+          "profiler_sec": 261.958,
+          "child_wall_sec": 263.652,
+          "peak_rss_mib": 140.3,
+          "avg_rss_mib": 89.26,
+          "peak_disk_bytes": 36999671,
+          "final_disk_bytes": 20852232
+        }
+      ],
+      "totals": {
+        "all_sessions_colab_cpu": true,
+        "sessions_overlap": false,
+        "total_profiler_sec": 261.958,
+        "total_child_wall_sec": 263.652,
+        "processed_attempts": 14,
+        "unique_publications": null,
+        "max_session_peak_rss_mib": 140.3,
+        "session_time_weighted_avg_rss_mib": 89.26,
+        "max_session_peak_disk_bytes": 36999671
+      }
+    },
+    "M2": {
+      "sessions": [
+        {
+          "session": "S1",
+          "status": "completed_with_errors",
+          "colab_cpu": false,
+          "processed_attempts": 73,
+          "publications_reused": 0,
+          "versions_reused": null,
+          "profiler_sec": 143.052,
+          "child_wall_sec": null,
+          "peak_rss_mib": 152.72,
+          "avg_rss_mib": 121.62,
+          "peak_disk_bytes": 129078695,
+          "final_disk_bytes": 83183049
+        }
+      ],
+      "totals": {
+        "all_sessions_colab_cpu": false,
+        "sessions_overlap": false,
+        "total_profiler_sec": 143.052,
+        "total_child_wall_sec": null,
+        "processed_attempts": 73,
+        "unique_publications": null,
+        "max_session_peak_rss_mib": 152.72,
+        "session_time_weighted_avg_rss_mib": 121.61999999999999,
+        "max_session_peak_disk_bytes": 129078695
+      }
     }
   }
 }

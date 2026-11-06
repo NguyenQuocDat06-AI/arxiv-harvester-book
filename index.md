@@ -1,6 +1,6 @@
 # arXiv Harvester — Thu thập và xử lý dữ liệu bài báo
 
-Báo cáo đồ án **Nhập môn Khoa học dữ liệu**, Milestone 1 và 2. Cập nhật ngày 2026-11-06.
+Báo cáo đồ án **Nhập môn Khoa học dữ liệu — chương trình Chuẩn**, Milestone 1 và 2. Cập nhật ngày 2026-11-06.
 
 ## Tóm tắt
 
@@ -12,6 +12,16 @@ Phạm vi đánh giá hiện tại là **73 paper và 119 version**, dựng từ
 8 lô backup đã kiểm tra checksum. Dải được giao cho toàn nhóm gồm
 25,000 paper. Kết quả snapshot và phép đo từng lượt được ghi riêng trong
 các bảng để người đọc đối chiếu đúng phạm vi.
+
+## Mốc nộp và trạng thái bản này
+
+Theo [phản hồi của giảng viên tại dòng 7](https://docs.google.com/spreadsheets/d/11UDWf52DitCDrV386WkYK0ZySqTGQSCRnEwQ37u9uyQ/edit#gid=0&range=A7:B7), đợt nộp Book hiện tại
+là nộp link để ghi nhận tiến độ. Nhóm được tiếp tục hoàn thiện nội dung đến deadline Poster
+trên Moodle, giữ nguyên URL. Bản này vì vậy trình bày kết quả đã có và các phần cần làm tiếp;
+benchmark cuối vẫn phải đáp ứng phạm vi toàn nhóm trên Colab CPU-only.
+
+Các điều chỉnh về `.bbl`, ngày references và benchmark nhiều phiên được giải thích tại
+[phụ lục QA](chapters/13_teacher_qa.md). Book dùng tiếng Việt cho chương trình Chuẩn.
 
 ## Thành viên và phạm vi phụ trách
 

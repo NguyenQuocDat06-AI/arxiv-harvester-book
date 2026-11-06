@@ -26,3 +26,9 @@ và kết quả của Book này được viết từ source và dữ liệu củ
 Commit parser cho các ví dụ thực thi được ghim trong `requirements.txt`. Thông tin môi
 trường của các lượt đo được hiển thị tại chương benchmark tương ứng. Công cụ trợ lý được
 dùng để hỗ trợ chuẩn bị code và nội dung; nhóm chịu trách nhiệm kiểm tra và giải thích bản nộp.
+
+
+## Hướng dẫn bổ sung của giảng viên
+
+[QA Replies 2627-1](https://docs.google.com/spreadsheets/d/11UDWf52DitCDrV386WkYK0ZySqTGQSCRnEwQ37u9uyQ/edit), đọc ngày 06/11/2026. Các nội dung được áp dụng và liên kết đến
+dòng phản hồi gốc nằm tại [phụ lục QA](13_teacher_qa.md).
