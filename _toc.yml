@@ -13,3 +13,7 @@ parts:
       - file: chapters/06_parsing_and_hierarchy
       - file: chapters/07_standardization_and_deduplication
       - file: chapters/08_parser_benchmark
+  - caption: Phụ lục
+    chapters:
+      - file: chapters/09_reproducibility
+      - file: chapters/10_requirements_and_limitations

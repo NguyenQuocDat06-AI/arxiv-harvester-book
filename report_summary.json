@@ -54,6 +54,9 @@
     "mean_before_bytes": 7596948.417910447,
     "mean_after_bytes": 229111.49253731343,
     "source_reduction": 0.9698416416784976,
+    "papers_with_all_sources_verified": 72,
+    "papers_with_sources_and_s2_verified": 10,
+    "missing_version_dates": 14,
     "schemas": {
       "papers": [
         {
@@ -1317,10 +1320,10 @@
       }
     ],
     "diagnostic_categories": {
-      "Citation chưa resolve": 31,
       "Include chưa hỗ trợ": 4,
       "Bibliography thiếu hoặc không đọc được": 22,
       "Môi trường TeX chưa hỗ trợ đầy đủ": 3,
+      "Citation chưa resolve": 31,
       "Compilation root mơ hồ": 1,
       "Thiếu source": 1
     },
@@ -1329,8 +1332,17 @@
       "hierarchy": 74992,
       "bibtex": 2676
     },
+    "versions_with_tex": 113,
+    "versions_with_unmeasured_counts": 2,
     "structural_valid": true,
-    "processing_complete": false
+    "processing_complete": false,
+    "before_fixes_status": {
+      "partial": 36,
+      "success": 71,
+      "error": 6,
+      "empty_no_tex": 5,
+      "error_missing_source": 1
+    }
   },
   "crawler_measurement": {
     "status": "paused_rate_limit",
