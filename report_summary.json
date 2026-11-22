@@ -1,62 +1,79 @@
 {
-  "report_date": "2026-11-06",
+  "report_date": "2026-11-22",
   "scope": {
-    "papers": 73,
-    "versions": 119,
+    "papers": 25000,
+    "versions": 41498,
     "group_assigned": 25000,
     "member_assigned": 5000,
-    "checkpoint_reported_ids": 2217,
-    "archives_used": 8,
-    "selection": "Các lô mới nhất dưới 8 MiB; không chọn theo parser success và không khôi phục toàn chuỗi."
+    "members": 5,
+    "archives_used": 1713,
+    "selection": "Toàn bộ dải 25.000 bài của 5 thành viên (DAT, TUAN, TAN, TRI, TRIET); TRI đã được --resume trên Google Colab CPU từ 4.425 lên 5.000 bài trước khi chạy M2."
   },
   "m1": {
     "version_histogram": {
-      "3": 8,
-      "4": 3,
-      "1": 41,
-      "2": 21
+      "1": 14067,
+      "2": 7266,
+      "3": 2492,
+      "4": 765,
+      "5": 246,
+      "6": 93,
+      "7": 40,
+      "8": 18,
+      "9": 2,
+      "10": 4,
+      "11": 2,
+      "13": 2,
+      "14": 2,
+      "17": 1
     },
     "version_status": {
-      "success": 113,
-      "pdf_only": 5,
-      "error": 1
+      "pdf_only": 2756,
+      "success": 38554,
+      "not_found": 169,
+      "no_latex": 8,
+      "error": 11
     },
     "source_audit": {
-      "tex_verified": 113,
-      "empty_verified": 5,
-      "source_pending_or_failed": 1
+      "tex_verified": 38554,
+      "empty_verified": 2764,
+      "not_found_verified": 169,
+      "source_pending_or_failed": 11
     },
-    "source_verified": 118,
+    "source_verified": 41487,
     "metadata_missing_fraction": {
       "title": 0.0,
       "authors": 0.0,
       "published": 0.0,
-      "doi": 0.7123287671232876,
-      "venue": 0.8082191780821918
+      "doi": 0.77696,
+      "venue": 0.82544
     },
     "references_missing_fraction": {
-      "ref_arxiv_id": 0.3993993993993994,
-      "ref_title": 0.0,
-      "ref_authors": 0.04804804804804805,
-      "ref_submission_date": 0.14714714714714713,
-      "ref_s2_id": 0.04804804804804805
+      "ref_arxiv_id": 0.5328022401779687,
+      "ref_title": 0.004403129612198892,
+      "ref_authors": 0.11230694698935116,
+      "ref_submission_date": 0.21026249781072587,
+      "ref_s2_id": 0.13116389495171307
     },
     "reference_status": {
-      "success": 6,
-      "empty": 4,
-      "api_error": 63
+      "success": 21032,
+      "empty": 3245,
+      "partial": 93,
+      "not_indexed": 4,
+      "bib_fallback": 14,
+      "api_error": 167,
+      "bib_pending": 445
     },
-    "working_reference_rows": 333,
-    "arxiv_reference_rows": 200,
-    "verified_reference_papers": 10,
-    "mean_references_verified_papers": 33.3,
-    "eligible_size_papers": 67,
-    "mean_before_bytes": 7596948.417910447,
-    "mean_after_bytes": 229111.49253731343,
-    "source_reduction": 0.9698416416784976,
-    "papers_with_all_sources_verified": 72,
-    "papers_with_sources_and_s2_verified": 10,
-    "missing_version_dates": 14,
+    "working_reference_rows": 976351,
+    "arxiv_reference_rows": 456149,
+    "verified_reference_papers": 24277,
+    "mean_references_verified_papers": 38.9161346130082,
+    "eligible_size_papers": 22748,
+    "mean_before_bytes": 9944811.276683664,
+    "mean_after_bytes": 1064255.9199490065,
+    "source_reduction": 0.8929837992557755,
+    "papers_with_all_sources_verified": 24997,
+    "papers_with_sources_and_s2_verified": 24277,
+    "missing_version_dates": 5565,
     "schemas": {
       "papers": [
         {
@@ -121,1612 +138,2499 @@
           "type": "string",
           "nullable": true
         }
+      ],
+      "elements": [
+        {
+          "column": "element_id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "column": "arxiv_id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "column": "kind",
+          "type": "dictionary<values=string, indices=int32, ordered=0>",
+          "nullable": true
+        },
+        {
+          "column": "content",
+          "type": "string",
+          "nullable": true
+        }
+      ],
+      "hierarchy": [
+        {
+          "column": "arxiv_id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "column": "version",
+          "type": "int32",
+          "nullable": true
+        },
+        {
+          "column": "element_id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "column": "parent_id",
+          "type": "string",
+          "nullable": false
+        }
+      ],
+      "bibtex": [
+        {
+          "column": "arxiv_id",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "column": "citation_key",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "column": "entry_type",
+          "type": "dictionary<values=string, indices=int32, ordered=0>",
+          "nullable": true
+        },
+        {
+          "column": "title",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "column": "authors",
+          "type": "list<item: string>",
+          "nullable": true
+        },
+        {
+          "column": "year",
+          "type": "int32",
+          "nullable": true
+        },
+        {
+          "column": "doi",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "column": "journal",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "column": "url",
+          "type": "string",
+          "nullable": true
+        }
       ]
-    }
-  },
-  "m2": {
-    "status_counts": {
-      "partial": 31,
-      "success": 81,
-      "empty_no_tex": 5,
-      "error": 1,
-      "error_missing_source": 1
     },
-    "deduplication": {
-      "elements": {
-        "before": 76332,
-        "after": 47037,
-        "reduction_rate": 0.3837839962270083
+    "avg_versions_per_paper": 1.66,
+    "paper_crawl_success_rate": 0.9099,
+    "source_version_coverage_rate": 0.9291,
+    "total_source_size_before_bytes": 228383687539,
+    "total_source_size_after_bytes": 24397139418,
+    "duplicate_publications_removed": 0,
+    "duplicate_references_removed": 0,
+    "orphan_references_count": 0,
+    "phases_aggregated": {
+      "drive_backup": {
+        "elapsed_sec": 5328.157,
+        "calls": 1423
       },
-      "bibtex": {
-        "before": 4361,
-        "after": 2676,
-        "reduction_rate": 0.3863792708094474
+      "id_generation": {
+        "elapsed_sec": 0.316,
+        "calls": 240
+      },
+      "discovery": {
+        "elapsed_sec": 2094.922,
+        "calls": 413
+      },
+      "s2_batch": {
+        "elapsed_sec": 3076.622,
+        "calls": 1219
+      },
+      "download_clean": {
+        "elapsed_sec": 131274.702,
+        "calls": 33399
+      },
+      "extract_clean": {
+        "elapsed_sec": 3432.432,
+        "calls": 30950
+      },
+      "extraction_wait": {
+        "elapsed_sec": 2168.396,
+        "calls": 30950
+      },
+      "storage": {
+        "elapsed_sec": 746.096,
+        "calls": 4339
+      },
+      "rate_limit_wait": {
+        "elapsed_sec": 282.239,
+        "calls": 33
+      },
+      "references": {
+        "elapsed_sec": 8881.266,
+        "calls": 52200
+      },
+      "s2_recovery_wait": {
+        "elapsed_sec": 22577.279,
+        "calls": 182
+      },
+      "export": {
+        "elapsed_sec": 28.955,
+        "calls": 4
       }
     },
-    "unresolved_cites": 1035,
-    "bibliography_conflicts": 114,
-    "coverage": [
-      {
-        "paper": "P001",
-        "expected_versions": 3,
-        "recorded_versions": 3,
-        "statuses": {
-          "partial": 3
-        },
-        "versions_with_tex": 3,
-        "success_versions": 0,
-        "partial_versions": 3,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 0.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P002",
-        "expected_versions": 4,
-        "recorded_versions": 4,
-        "statuses": {
-          "success": 4
-        },
-        "versions_with_tex": 4,
-        "success_versions": 4,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P003",
-        "expected_versions": 3,
-        "recorded_versions": 3,
-        "statuses": {
-          "partial": 3
-        },
-        "versions_with_tex": 3,
-        "success_versions": 0,
-        "partial_versions": 3,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 0.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P004",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "partial": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 0,
-        "partial_versions": 1,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 0.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P005",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P006",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P007",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P008",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "partial": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 0,
-        "partial_versions": 1,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 0.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P009",
-        "expected_versions": 2,
-        "recorded_versions": 2,
-        "statuses": {
-          "success": 2
-        },
-        "versions_with_tex": 2,
-        "success_versions": 2,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P010",
-        "expected_versions": 2,
-        "recorded_versions": 2,
-        "statuses": {
-          "success": 1,
-          "partial": 1
-        },
-        "versions_with_tex": 2,
-        "success_versions": 1,
-        "partial_versions": 1,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 0.5,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P011",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P012",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P013",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P014",
-        "expected_versions": 3,
-        "recorded_versions": 3,
-        "statuses": {
-          "success": 3
-        },
-        "versions_with_tex": 3,
-        "success_versions": 3,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P015",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "partial": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 0,
-        "partial_versions": 1,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 0.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P016",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P017",
-        "expected_versions": 2,
-        "recorded_versions": 2,
-        "statuses": {
-          "partial": 1,
-          "success": 1
-        },
-        "versions_with_tex": 2,
-        "success_versions": 1,
-        "partial_versions": 1,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 0.5,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P018",
-        "expected_versions": 4,
-        "recorded_versions": 4,
-        "statuses": {
-          "success": 4
-        },
-        "versions_with_tex": 4,
-        "success_versions": 4,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P019",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "empty_no_tex": 1
-        },
-        "versions_with_tex": 0,
-        "success_versions": 0,
-        "partial_versions": 0,
-        "empty_versions": 1,
-        "error_versions": 0,
-        "parsed_version_coverage": 0.0,
-        "successful_version_coverage": 0.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P020",
-        "expected_versions": 2,
-        "recorded_versions": 2,
-        "statuses": {
-          "partial": 2
-        },
-        "versions_with_tex": 2,
-        "success_versions": 0,
-        "partial_versions": 2,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 0.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P021",
-        "expected_versions": 2,
-        "recorded_versions": 2,
-        "statuses": {
-          "success": 2
-        },
-        "versions_with_tex": 2,
-        "success_versions": 2,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P022",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P023",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P024",
-        "expected_versions": 2,
-        "recorded_versions": 2,
-        "statuses": {
-          "partial": 2
-        },
-        "versions_with_tex": 2,
-        "success_versions": 0,
-        "partial_versions": 2,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 0.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P025",
-        "expected_versions": 2,
-        "recorded_versions": 2,
-        "statuses": {
-          "partial": 2
-        },
-        "versions_with_tex": 2,
-        "success_versions": 0,
-        "partial_versions": 2,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 0.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P026",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P027",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P028",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P029",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P030",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P031",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "partial": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 0,
-        "partial_versions": 1,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 0.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P032",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "partial": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 0,
-        "partial_versions": 1,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 0.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P033",
-        "expected_versions": 3,
-        "recorded_versions": 3,
-        "statuses": {
-          "success": 3
-        },
-        "versions_with_tex": 3,
-        "success_versions": 3,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P034",
-        "expected_versions": 2,
-        "recorded_versions": 2,
-        "statuses": {
-          "partial": 2
-        },
-        "versions_with_tex": 2,
-        "success_versions": 0,
-        "partial_versions": 2,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 0.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P035",
-        "expected_versions": 3,
-        "recorded_versions": 3,
-        "statuses": {
-          "success": 3
-        },
-        "versions_with_tex": 3,
-        "success_versions": 3,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P036",
-        "expected_versions": 2,
-        "recorded_versions": 2,
-        "statuses": {
-          "success": 2
-        },
-        "versions_with_tex": 2,
-        "success_versions": 2,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P037",
-        "expected_versions": 2,
-        "recorded_versions": 2,
-        "statuses": {
-          "success": 2
-        },
-        "versions_with_tex": 2,
-        "success_versions": 2,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P038",
-        "expected_versions": 2,
-        "recorded_versions": 2,
-        "statuses": {
-          "success": 2
-        },
-        "versions_with_tex": 2,
-        "success_versions": 2,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P039",
-        "expected_versions": 4,
-        "recorded_versions": 4,
-        "statuses": {
-          "success": 4
-        },
-        "versions_with_tex": 4,
-        "success_versions": 4,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P040",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "empty_no_tex": 1
-        },
-        "versions_with_tex": 0,
-        "success_versions": 0,
-        "partial_versions": 0,
-        "empty_versions": 1,
-        "error_versions": 0,
-        "parsed_version_coverage": 0.0,
-        "successful_version_coverage": 0.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P041",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P042",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P043",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P044",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P045",
-        "expected_versions": 2,
-        "recorded_versions": 2,
-        "statuses": {
-          "success": 2
-        },
-        "versions_with_tex": 2,
-        "success_versions": 2,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P046",
-        "expected_versions": 2,
-        "recorded_versions": 2,
-        "statuses": {
-          "success": 2
-        },
-        "versions_with_tex": 2,
-        "success_versions": 2,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P047",
-        "expected_versions": 2,
-        "recorded_versions": 2,
-        "statuses": {
-          "partial": 2
-        },
-        "versions_with_tex": 2,
-        "success_versions": 0,
-        "partial_versions": 2,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 0.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P048",
-        "expected_versions": 2,
-        "recorded_versions": 2,
-        "statuses": {
-          "success": 2
-        },
-        "versions_with_tex": 2,
-        "success_versions": 2,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P049",
-        "expected_versions": 2,
-        "recorded_versions": 2,
-        "statuses": {
-          "success": 2
-        },
-        "versions_with_tex": 2,
-        "success_versions": 2,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P050",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "empty_no_tex": 1
-        },
-        "versions_with_tex": 0,
-        "success_versions": 0,
-        "partial_versions": 0,
-        "empty_versions": 1,
-        "error_versions": 0,
-        "parsed_version_coverage": 0.0,
-        "successful_version_coverage": 0.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P051",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P052",
-        "expected_versions": 3,
-        "recorded_versions": 3,
-        "statuses": {
-          "success": 3
-        },
-        "versions_with_tex": 3,
-        "success_versions": 3,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P053",
-        "expected_versions": 3,
-        "recorded_versions": 3,
-        "statuses": {
-          "partial": 3
-        },
-        "versions_with_tex": 3,
-        "success_versions": 0,
-        "partial_versions": 3,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 0.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P054",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P055",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "empty_no_tex": 1
-        },
-        "versions_with_tex": 0,
-        "success_versions": 0,
-        "partial_versions": 0,
-        "empty_versions": 1,
-        "error_versions": 0,
-        "parsed_version_coverage": 0.0,
-        "successful_version_coverage": 0.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P056",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P057",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P058",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P059",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P060",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P061",
-        "expected_versions": 3,
-        "recorded_versions": 3,
-        "statuses": {
-          "success": 3
-        },
-        "versions_with_tex": 3,
-        "success_versions": 3,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P062",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P063",
-        "expected_versions": 2,
-        "recorded_versions": 2,
-        "statuses": {
-          "partial": 2
-        },
-        "versions_with_tex": 2,
-        "success_versions": 0,
-        "partial_versions": 2,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 0.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P064",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "error": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 0,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 1,
-        "parsed_version_coverage": 0.0,
-        "successful_version_coverage": 0.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P065",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P066",
-        "expected_versions": 2,
-        "recorded_versions": 2,
-        "statuses": {
-          "partial": 2
-        },
-        "versions_with_tex": 2,
-        "success_versions": 0,
-        "partial_versions": 2,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 0.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P067",
-        "expected_versions": 2,
-        "recorded_versions": 2,
-        "statuses": {
-          "success": 2
-        },
-        "versions_with_tex": 2,
-        "success_versions": 2,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P068",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P069",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "success": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P070",
-        "expected_versions": 2,
-        "recorded_versions": 2,
-        "statuses": {
-          "success": 2
-        },
-        "versions_with_tex": 2,
-        "success_versions": 2,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 1.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P071",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "partial": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 0,
-        "partial_versions": 1,
-        "empty_versions": 0,
-        "error_versions": 0,
-        "parsed_version_coverage": 1.0,
-        "successful_version_coverage": 0.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P072",
-        "expected_versions": 1,
-        "recorded_versions": 1,
-        "statuses": {
-          "empty_no_tex": 1
-        },
-        "versions_with_tex": 0,
-        "success_versions": 0,
-        "partial_versions": 0,
-        "empty_versions": 1,
-        "error_versions": 0,
-        "parsed_version_coverage": 0.0,
-        "successful_version_coverage": 0.0,
-        "version_coverage": 1.0
-      },
-      {
-        "paper": "P073",
-        "expected_versions": 2,
-        "recorded_versions": 2,
-        "statuses": {
-          "success": 1,
-          "error_missing_source": 1
-        },
-        "versions_with_tex": 1,
-        "success_versions": 1,
-        "partial_versions": 0,
-        "empty_versions": 0,
-        "error_versions": 1,
-        "parsed_version_coverage": 0.5,
-        "successful_version_coverage": 0.5,
-        "version_coverage": 1.0
+    "colab_sessions": [
+      {
+        "session_label": "M1-TUAN",
+        "publications_count": 5000,
+        "processed_this_run": 5000,
+        "status": "completed_with_errors",
+        "runtime_sec": 41362.868,
+        "peak_rss_mb": 1115.61,
+        "avg_rss_mb": 667.32,
+        "colab_cpu": true
+      },
+      {
+        "session_label": "M1-DAT",
+        "publications_count": 5000,
+        "processed_this_run": 5000,
+        "status": "completed_with_errors",
+        "runtime_sec": 38731.255,
+        "peak_rss_mb": 1129.52,
+        "avg_rss_mb": 572.63,
+        "colab_cpu": true
+      },
+      {
+        "session_label": "M1-TAN",
+        "publications_count": 5000,
+        "processed_this_run": 5000,
+        "status": "completed_with_errors",
+        "runtime_sec": 40399.386,
+        "peak_rss_mb": 1227.73,
+        "avg_rss_mb": 642.27,
+        "colab_cpu": true
+      },
+      {
+        "session_label": "M1-TRI-resume",
+        "publications_count": 5000,
+        "processed_this_run": 644,
+        "status": "paused_time_budget",
+        "runtime_sec": 6058.999,
+        "peak_rss_mb": 981.87,
+        "avg_rss_mb": 625.73,
+        "colab_cpu": true
+      },
+      {
+        "session_label": "M1-TRIET",
+        "publications_count": 5000,
+        "processed_this_run": 5000,
+        "status": "completed_with_errors",
+        "runtime_sec": 40776.403,
+        "peak_rss_mb": 1208.22,
+        "avg_rss_mb": 853.3,
+        "colab_cpu": true
       }
     ],
-    "diagnostic_categories": {
-      "Include chưa hỗ trợ": 4,
-      "Môi trường TeX chưa hỗ trợ đầy đủ": 3,
-      "Citation chưa resolve": 31,
-      "Bibliography thiếu hoặc không đọc được": 22,
-      "Compilation root mơ hồ": 1,
-      "Thiếu source": 1
+    "max_member_peak_rss_mb": 1227.73,
+    "weighted_avg_rss_mb": 686.54
+  },
+  "m2": {
+    "status": "completed_with_errors",
+    "code_hash": "cf2de7a143c80d55d4744293ccd8828290490a00a9ca8df5bc8a3d62973d5c58",
+    "status_counts": {
+      "empty_no_tex": 2764,
+      "success": 33025,
+      "partial": 4503,
+      "error": 1026,
+      "error_missing_source": 180
+    },
+    "versions_with_tex": 38554,
+    "versions_with_unmeasured_counts": 1206,
+    "unresolved_cites": 40179,
+    "bibliography_conflicts": 64021,
+    "deduplication": {
+      "elements": {
+        "before": 23099589,
+        "after": 15006000,
+        "reduction_rate": 0.35037805218092843
+      },
+      "bibtex": {
+        "before": 1834650,
+        "after": 1177293,
+        "reduction_rate": 0.35830103834518845
+      }
     },
     "rows": {
-      "elements": 47037,
-      "hierarchy": 74992,
-      "bibtex": 2676
+      "elements": 15006000,
+      "hierarchy": 22532299,
+      "bibtex": 1177293
     },
-    "versions_with_tex": 113,
-    "versions_with_unmeasured_counts": 2,
     "structural_valid": true,
     "processing_complete": false,
-    "before_fixes_status": {
-      "partial": 36,
-      "success": 71,
-      "error": 6,
-      "empty_no_tex": 5,
-      "error_missing_source": 1
+    "validation_errors": [],
+    "coverage_fraction": 1.0,
+    "missing_versions": 0,
+    "per_member": [
+      {
+        "member": "DAT",
+        "full_name": "Nguyễn Quốc Đạt",
+        "student_id": "24120282",
+        "id_range": "2412.18848 - 2501.02641",
+        "publications": 5000,
+        "versions": 8149,
+        "tex_verified": 7479,
+        "success": 6470,
+        "partial": 853,
+        "empty_no_tex": 621,
+        "error": 156,
+        "error_missing_source": 49,
+        "tex_success_rate": 0.8650889156304319,
+        "tex_parsed_rate": 0.9791415964701163,
+        "elements_before": 4692375,
+        "elements_after": 3109342,
+        "elements_reduction": 0.33736284930339117,
+        "bibtex_before": 349168,
+        "bibtex_after": 227390,
+        "bibtex_reduction": 0.3487662099619667,
+        "unresolved_cites": 8459,
+        "bibliography_conflicts": 11198,
+        "runtime_sec": 3350.243,
+        "avg_sec_per_pub": 0.6700486,
+        "peak_rss_mib": 845.34,
+        "os_reported_peak_rss_mib": 848.55,
+        "avg_rss_mib": 237.55,
+        "final_output_bytes": 858474021,
+        "disk_peak_bytes": 7912809313,
+        "final_disk_bytes": 5047234266,
+        "colab_cpu": true
+      },
+      {
+        "member": "TUAN",
+        "full_name": "Nguyễn Đình Tuấn",
+        "student_id": "24120237",
+        "id_range": "2502.03235 - 2502.08234",
+        "publications": 5000,
+        "versions": 8550,
+        "tex_verified": 7992,
+        "success": 6782,
+        "partial": 990,
+        "empty_no_tex": 505,
+        "error": 220,
+        "error_missing_source": 53,
+        "tex_success_rate": 0.8485985985985987,
+        "tex_parsed_rate": 0.9724724724724725,
+        "elements_before": 4968850,
+        "elements_after": 3166489,
+        "elements_reduction": 0.362732020487638,
+        "bibtex_before": 389702,
+        "bibtex_after": 244143,
+        "bibtex_reduction": 0.37351360783367804,
+        "unresolved_cites": 8630,
+        "bibliography_conflicts": 15014,
+        "runtime_sec": 3777.627,
+        "avg_sec_per_pub": 0.7555254,
+        "peak_rss_mib": 789.36,
+        "os_reported_peak_rss_mib": 789.39,
+        "avg_rss_mib": 225.74,
+        "final_output_bytes": 888903596,
+        "disk_peak_bytes": 8415823340,
+        "final_disk_bytes": 5411615716,
+        "colab_cpu": true
+      },
+      {
+        "member": "TAN",
+        "full_name": "Trần Nguyên Tân",
+        "student_id": "24120438",
+        "id_range": "2407.12839 - 2407.17838",
+        "publications": 5000,
+        "versions": 8093,
+        "tex_verified": 7488,
+        "success": 6420,
+        "partial": 876,
+        "empty_no_tex": 588,
+        "error": 192,
+        "error_missing_source": 17,
+        "tex_success_rate": 0.8573717948717948,
+        "tex_parsed_rate": 0.9743589743589743,
+        "elements_before": 4441468,
+        "elements_after": 2905875,
+        "elements_reduction": 0.34573996705593735,
+        "bibtex_before": 368760,
+        "bibtex_after": 241199,
+        "bibtex_reduction": 0.345918754745634,
+        "unresolved_cites": 7096,
+        "bibliography_conflicts": 13157,
+        "runtime_sec": 3740.636,
+        "avg_sec_per_pub": 0.7481272,
+        "peak_rss_mib": 498.27,
+        "os_reported_peak_rss_mib": 783.9,
+        "avg_rss_mib": 243.59,
+        "final_output_bytes": 814769667,
+        "disk_peak_bytes": 7544122109,
+        "final_disk_bytes": 4841871809,
+        "colab_cpu": true
+      },
+      {
+        "member": "TRI",
+        "full_name": "Dương Phan Minh Trí",
+        "student_id": "24120470",
+        "id_range": "2406.17938 - 2407.02838",
+        "publications": 5000,
+        "versions": 8338,
+        "tex_verified": 7818,
+        "success": 6668,
+        "partial": 893,
+        "empty_no_tex": 493,
+        "error": 257,
+        "error_missing_source": 27,
+        "tex_success_rate": 0.8529035558966488,
+        "tex_parsed_rate": 0.9671271424916859,
+        "elements_before": 4522659,
+        "elements_after": 2936412,
+        "elements_reduction": 0.35073327438570984,
+        "bibtex_before": 368431,
+        "bibtex_after": 234862,
+        "bibtex_reduction": 0.3625346401361449,
+        "unresolved_cites": 7700,
+        "bibliography_conflicts": 12140,
+        "runtime_sec": 3924.095,
+        "avg_sec_per_pub": 0.7848189999999999,
+        "peak_rss_mib": 512.07,
+        "os_reported_peak_rss_mib": 762.32,
+        "avg_rss_mib": 241.44,
+        "final_output_bytes": 813940985,
+        "disk_peak_bytes": 7620761642,
+        "final_disk_bytes": 4875559960,
+        "colab_cpu": true
+      },
+      {
+        "member": "TRIET",
+        "full_name": "Trịnh Vỹ Triết",
+        "student_id": "24120474",
+        "id_range": "2406.12938 - 2406.17937",
+        "publications": 5000,
+        "versions": 8368,
+        "tex_verified": 7777,
+        "success": 6685,
+        "partial": 891,
+        "empty_no_tex": 557,
+        "error": 201,
+        "error_missing_source": 34,
+        "tex_success_rate": 0.8595859585958596,
+        "tex_parsed_rate": 0.9741545583129742,
+        "elements_before": 4474237,
+        "elements_after": 2887882,
+        "elements_reduction": 0.3545531897393902,
+        "bibtex_before": 358589,
+        "bibtex_after": 229699,
+        "bibtex_reduction": 0.35943656944301133,
+        "unresolved_cites": 8294,
+        "bibliography_conflicts": 12512,
+        "runtime_sec": 3899.487,
+        "avg_sec_per_pub": 0.7798974,
+        "peak_rss_mib": 546.96,
+        "os_reported_peak_rss_mib": 757.16,
+        "avg_rss_mib": 251.04,
+        "final_output_bytes": 803680178,
+        "disk_peak_bytes": 7552624944,
+        "final_disk_bytes": 4838982904,
+        "colab_cpu": true
+      }
+    ],
+    "coverage_tiers": {
+      "Mọi version empty (PDF-only / no LaTeX)": 2006,
+      "Parsed đủ (không lỗi, có partial)": 2946,
+      "Hoàn toàn sạch (mọi version success/empty)": 19168,
+      "Có ít nhất 1 version lỗi/thiếu nguồn": 880
+    },
+    "parsed_coverage_buckets": {
+      "Không có TeX (chỉ empty)": 2006,
+      "100% version TeX parse được": 22027,
+      "0% (lỗi/thiếu hết)": 426,
+      "50% - <100%": 484,
+      ">0% - <50%": 57
+    },
+    "diagnostic_categories": {
+      "Citation key chưa resolve được sau hợp nhất": 2084,
+      "Bibliography thiếu / không đọc được / trùng khóa": 1536,
+      "Lệnh \\item / môi trường TeX tùy biến": 951,
+      "Include thiếu hoặc tên file có dấu chấm phụ": 805,
+      "Compilation root mơ hồ / không tìm thấy root": 613,
+      "Lỗi / diagnostic cấu trúc khác (Unclosed group, self-edge...)": 404,
+      "Include động / không hỗ trợ": 271,
+      "Thiếu nguồn M1 (HTTP 404 hoặc 11 ver pending)": 180
+    },
+    "top_diagnostics": [
+      {
+        "message": "item outside supported list",
+        "versions": 9087
+      },
+      {
+        "message": "Unclosed TeX group",
+        "versions": 285
+      },
+      {
+        "message": "unsupported/empty compiled bibliography: main.bbl; original retained",
+        "versions": 209
+      },
+      {
+        "message": "dynamic/unsupported include in main.tex",
+        "versions": 164
+      },
+      {
+        "message": "unmatched end environment: multline",
+        "versions": 90
+      },
+      {
+        "message": "duplicate citation key in inline bibliography: Robertson20192",
+        "versions": 76
+      },
+      {
+        "message": "missing/unsafe bibliography: references.bib",
+        "versions": 57
+      },
+      {
+        "message": "unreadable compiled bibliography main.bbl: Unclosed TeX group",
+        "versions": 57
+      },
+      {
+        "message": "missing include: sample.tikzstyles",
+        "versions": 54
+      },
+      {
+        "message": "dynamic/unsupported include in hcbc.tex",
+        "versions": 52
+      },
+      {
+        "message": "duplicate citation key in inline bibliography: AM",
+        "versions": 41
+      },
+      {
+        "message": "Publication pipeline failed: Deduplication would create a self-edge; inspect structural content",
+        "versions": 40
+      },
+      {
+        "message": "duplicate citation key in inline bibliography: kn:gnus",
+        "versions": 38
+      },
+      {
+        "message": "dynamic/unsupported include in paper.tex",
+        "versions": 36
+      },
+      {
+        "message": "duplicate citation key in inline bibliography: ConcreteMath",
+        "versions": 36
+      }
+    ],
+    "pilot_v1_vs_v2": {
+      "papers": 250,
+      "versions": 536,
+      "v1": {
+        "status_counts": {
+          "success": 352,
+          "error": 70,
+          "empty_no_tex": 32,
+          "error_missing_source": 17,
+          "partial": 65
+        },
+        "tex_success_rate": 0.7257731958762886,
+        "unresolved_cites": 507,
+        "runtime_sec": 307.872,
+        "avg_sec_per_pub": 1.2314880000000001,
+        "peak_rss_mb": 780.57,
+        "avg_rss_mb": 216.22
+      },
+      "v2": {
+        "status_counts": {
+          "success": 407,
+          "empty_no_tex": 32,
+          "error": 14,
+          "partial": 64,
+          "error_missing_source": 19
+        },
+        "tex_success_rate": 0.8391752577319588,
+        "unresolved_cites": 391,
+        "runtime_sec": 357.55,
+        "avg_sec_per_pub": 1.4302000000000001,
+        "peak_rss_mb": 804.69,
+        "avg_rss_mb": 224.37,
+        "deduplication": {
+          "elements": {
+            "before": 331129,
+            "after": 182554,
+            "reduction_rate": 0.44869220152870937
+          },
+          "bibtex": {
+            "before": 26342,
+            "after": 14015,
+            "reduction_rate": 0.46795991192772
+          }
+        }
+      }
     }
   },
-  "crawler_measurement": {
-    "status": "paused_rate_limit",
-    "runtime_sec": 261.958,
-    "child_wall_sec": 263.652,
-    "processed_papers": 14,
+  "m2_benchmark": {
     "environment": {
-      "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+      "platform": "Linux x86_64 (Google Colab CPU Standard)",
       "python_version": "3.13.18",
       "is_google_colab": true,
       "cpu_only": true,
       "cpu_count_logical": 2,
       "total_memory_mb": 12975.52,
-      "library_versions": {
-        "psutil": "5.9.5",
-        "pandas": "2.2.3",
-        "pyarrow": "23.0.1",
-        "requests": "2.32.4"
+      "code_hash": "cf2de7a143c80d55d4744293ccd8828290490a00a9ca8df5bc8a3d62973d5c58"
+    },
+    "sessions": [
+      {
+        "session": "S1 (DAT)",
+        "member": "DAT",
+        "status": "completed_with_errors",
+        "colab_cpu": true,
+        "cpu_count_logical": 2,
+        "python_version": "3.13.18",
+        "processed_attempts": 5000,
+        "publications_reused": 0,
+        "profiler_sec": 3350.243,
+        "avg_sec_per_pub": 0.6700486,
+        "peak_rss_mib": 845.34,
+        "avg_rss_mib": 237.55,
+        "peak_disk_bytes": 7912809313,
+        "final_disk_bytes": 5047234266,
+        "final_output_bytes": 858474021
+      },
+      {
+        "session": "S2 (TUAN)",
+        "member": "TUAN",
+        "status": "completed_with_errors",
+        "colab_cpu": true,
+        "cpu_count_logical": 2,
+        "python_version": "3.13.18",
+        "processed_attempts": 5000,
+        "publications_reused": 0,
+        "profiler_sec": 3777.627,
+        "avg_sec_per_pub": 0.7555254,
+        "peak_rss_mib": 789.36,
+        "avg_rss_mib": 225.74,
+        "peak_disk_bytes": 8415823340,
+        "final_disk_bytes": 5411615716,
+        "final_output_bytes": 888903596
+      },
+      {
+        "session": "S3 (TAN)",
+        "member": "TAN",
+        "status": "completed_with_errors",
+        "colab_cpu": true,
+        "cpu_count_logical": 2,
+        "python_version": "3.13.18",
+        "processed_attempts": 5000,
+        "publications_reused": 0,
+        "profiler_sec": 3740.636,
+        "avg_sec_per_pub": 0.7481272,
+        "peak_rss_mib": 498.27,
+        "avg_rss_mib": 243.59,
+        "peak_disk_bytes": 7544122109,
+        "final_disk_bytes": 4841871809,
+        "final_output_bytes": 814769667
+      },
+      {
+        "session": "S4 (TRI)",
+        "member": "TRI",
+        "status": "completed_with_errors",
+        "colab_cpu": true,
+        "cpu_count_logical": 2,
+        "python_version": "3.13.18",
+        "processed_attempts": 5000,
+        "publications_reused": 0,
+        "profiler_sec": 3924.095,
+        "avg_sec_per_pub": 0.7848189999999999,
+        "peak_rss_mib": 512.07,
+        "avg_rss_mib": 241.44,
+        "peak_disk_bytes": 7620761642,
+        "final_disk_bytes": 4875559960,
+        "final_output_bytes": 813940985
+      },
+      {
+        "session": "S5 (TRIET)",
+        "member": "TRIET",
+        "status": "completed_with_errors",
+        "colab_cpu": true,
+        "cpu_count_logical": 2,
+        "python_version": "3.13.18",
+        "processed_attempts": 5000,
+        "publications_reused": 0,
+        "profiler_sec": 3899.487,
+        "avg_sec_per_pub": 0.7798974,
+        "peak_rss_mib": 546.96,
+        "avg_rss_mib": 251.04,
+        "peak_disk_bytes": 7552624944,
+        "final_disk_bytes": 4838982904,
+        "final_output_bytes": 803680178
       }
+    ],
+    "totals": {
+      "all_sessions_colab_cpu": true,
+      "sessions_overlap": false,
+      "duplicate_run_files_skipped": 0,
+      "processed_attempts": 25000,
+      "unique_publications": 25000,
+      "total_profiler_sec": 18692.088,
+      "avg_sec_per_unique_publication": 0.7476835199999999,
+      "max_session_peak_rss_mib": 845.34,
+      "session_time_weighted_avg_rss_mib": 240.00282794249634,
+      "max_session_peak_disk_bytes": 8415823340,
+      "final_output_bytes": 4215352479
     },
-    "memory": {
-      "peak_rss_mb": 140.3,
-      "avg_rss_mb": 89.26,
-      "num_samples": 568,
-      "sample_interval_sec": 0.5
-    },
-    "disk": {
-      "peak_bytes": 36999671,
-      "final_bytes": 20852232,
-      "method": "periodic samples and operation checkpoints; nested directories counted once",
-      "sample_interval_sec": null
-    },
-    "phases": {
-      "drive_backup": {
-        "elapsed_sec": 0.65,
-        "calls": 3
-      },
-      "id_generation": {
-        "elapsed_sec": 53.396,
-        "calls": 1
-      },
-      "references": {
-        "elapsed_sec": 196.287,
-        "calls": 15
-      },
-      "download_clean": {
-        "elapsed_sec": 9.928,
-        "calls": 3
-      },
-      "storage": {
-        "elapsed_sec": 0.459,
-        "calls": 15
-      },
-      "discovery": {
-        "elapsed_sec": 0.355,
-        "calls": 1
-      },
-      "export": {
-        "elapsed_sec": 0.124,
-        "calls": 1
-      }
-    },
-    "assigned_ids": 5000,
-    "intervals": {
-      "rate_limit_sec": 3.0,
-      "source_rate_limit_sec": 1.0,
-      "s2_rate_limit_sec": 5.0
-    }
-  },
-  "parser_measurement": {
-    "status": "completed_with_errors",
-    "runtime_sec": 143.052,
-    "child_wall_sec": null,
-    "processed_papers": 73,
-    "environment": {
-      "platform": "Windows-11-10.0.26200-SP0",
-      "python_version": "3.12.0",
-      "is_google_colab": false,
-      "cpu_only": true,
-      "cpu_count_logical": 12,
-      "total_memory_mb": 16163.3,
-      "library_versions": {
-        "psutil": "7.2.2",
-        "pandas": "2.3.3",
-        "pyarrow": "23.0.1",
-        "requests": "2.32.5"
-      }
-    },
-    "memory": {
-      "peak_rss_mb": 152.72,
-      "avg_rss_mb": 121.62,
-      "num_samples": 384,
-      "sample_interval_sec": 0.5
-    },
-    "disk": {
-      "peak_bytes": 129078695,
-      "final_bytes": 83183049,
-      "method": "periodic samples and operation checkpoints; nested directories counted once",
-      "sample_interval_sec": 5.0
-    },
-    "phases": {
+    "phases_aggregated": {
       "parse_publication": {
-        "elapsed_sec": 133.574,
-        "calls": 73
+        "elapsed_sec": 16065.461,
+        "calls": 25000
       },
       "storage": {
-        "elapsed_sec": 3.19,
-        "calls": 73
+        "elapsed_sec": 892.678,
+        "calls": 25000
       },
       "validation": {
-        "elapsed_sec": 1.515,
-        "calls": 1
+        "elapsed_sec": 1171.534,
+        "calls": 5
       }
     },
-    "final_output_bytes": 13348887,
-    "avg_sec_per_publication": 1.9596164383561643,
-    "resource_profile": {
-      "window_sec": 5.0,
-      "rss_samples": 384,
-      "disk_samples": 30,
-      "rows": [
-        {
-          "window_start_sec": 0.0,
-          "window_end_sec": 5.0,
-          "rss_sample_mean_mib": 65.448046875,
-          "rss_peak_mib": 73.3515625,
-          "disk_peak_bytes": 0
-        },
-        {
-          "window_start_sec": 5.0,
-          "window_end_sec": 10.0,
-          "rss_sample_mean_mib": 111.405078125,
-          "rss_peak_mib": 112.53125,
-          "disk_peak_bytes": 614551
-        },
-        {
-          "window_start_sec": 10.0,
-          "window_end_sec": 15.0,
-          "rss_sample_mean_mib": 114.21142578125,
-          "rss_peak_mib": 117.1015625,
-          "disk_peak_bytes": 4701665
-        },
-        {
-          "window_start_sec": 15.0,
-          "window_end_sec": 20.0,
-          "rss_sample_mean_mib": 120.14820772058823,
-          "rss_peak_mib": 121.609375,
-          "disk_peak_bytes": 10055227
-        },
-        {
-          "window_start_sec": 20.0,
-          "window_end_sec": 25.0,
-          "rss_sample_mean_mib": 121.7369140625,
-          "rss_peak_mib": 123.046875,
-          "disk_peak_bytes": 16112756
-        },
-        {
-          "window_start_sec": 25.0,
-          "window_end_sec": 30.0,
-          "rss_sample_mean_mib": 118.68250868055556,
-          "rss_peak_mib": 119.5546875,
-          "disk_peak_bytes": 20927876
-        },
-        {
-          "window_start_sec": 30.0,
-          "window_end_sec": 35.0,
-          "rss_sample_mean_mib": 121.6509650735294,
-          "rss_peak_mib": 123.02734375,
-          "disk_peak_bytes": 25821348
-        },
-        {
-          "window_start_sec": 35.0,
-          "window_end_sec": 40.0,
-          "rss_sample_mean_mib": 123.52008928571429,
-          "rss_peak_mib": 124.71484375,
-          "disk_peak_bytes": 30205642
-        },
-        {
-          "window_start_sec": 40.0,
-          "window_end_sec": 45.0,
-          "rss_sample_mean_mib": 125.2607421875,
-          "rss_peak_mib": 126.984375,
-          "disk_peak_bytes": 35525566
-        },
-        {
-          "window_start_sec": 45.0,
-          "window_end_sec": 50.0,
-          "rss_sample_mean_mib": 125.5,
-          "rss_peak_mib": 127.36328125,
-          "disk_peak_bytes": 35525566
-        },
-        {
-          "window_start_sec": 50.0,
-          "window_end_sec": 55.0,
-          "rss_sample_mean_mib": 124.9482421875,
-          "rss_peak_mib": 126.06640625,
-          "disk_peak_bytes": 35525566
-        },
-        {
-          "window_start_sec": 55.0,
-          "window_end_sec": 60.0,
-          "rss_sample_mean_mib": 125.60498046875,
-          "rss_peak_mib": 126.1796875,
-          "disk_peak_bytes": 35525566
-        },
-        {
-          "window_start_sec": 60.0,
-          "window_end_sec": 65.0,
-          "rss_sample_mean_mib": 125.2880859375,
-          "rss_peak_mib": 126.15625,
-          "disk_peak_bytes": 35525566
-        },
-        {
-          "window_start_sec": 65.0,
-          "window_end_sec": 70.0,
-          "rss_sample_mean_mib": 127.19587053571429,
-          "rss_peak_mib": 128.75,
-          "disk_peak_bytes": 35525566
-        },
-        {
-          "window_start_sec": 70.0,
-          "window_end_sec": 75.0,
-          "rss_sample_mean_mib": 127.12841796875,
-          "rss_peak_mib": 129.41015625,
-          "disk_peak_bytes": 35525566
-        },
-        {
-          "window_start_sec": 75.0,
-          "window_end_sec": 80.0,
-          "rss_sample_mean_mib": 126.08349609375,
-          "rss_peak_mib": 127.3671875,
-          "disk_peak_bytes": 35525566
-        },
-        {
-          "window_start_sec": 80.0,
-          "window_end_sec": 85.0,
-          "rss_sample_mean_mib": 125.90087890625,
-          "rss_peak_mib": 126.4375,
-          "disk_peak_bytes": 35525566
-        },
-        {
-          "window_start_sec": 85.0,
-          "window_end_sec": 90.0,
-          "rss_sample_mean_mib": 125.70256696428571,
-          "rss_peak_mib": 126.328125,
-          "disk_peak_bytes": 35525566
-        },
-        {
-          "window_start_sec": 90.0,
-          "window_end_sec": 95.0,
-          "rss_sample_mean_mib": 125.6728515625,
-          "rss_peak_mib": 126.42578125,
-          "disk_peak_bytes": 35525566
-        },
-        {
-          "window_start_sec": 95.0,
-          "window_end_sec": 100.0,
-          "rss_sample_mean_mib": 123.58110119047619,
-          "rss_peak_mib": 131.78125,
-          "disk_peak_bytes": 43272803
-        },
-        {
-          "window_start_sec": 100.0,
-          "window_end_sec": 105.0,
-          "rss_sample_mean_mib": 121.285400390625,
-          "rss_peak_mib": 121.8671875,
-          "disk_peak_bytes": 47087726
-        },
-        {
-          "window_start_sec": 105.0,
-          "window_end_sec": 110.0,
-          "rss_sample_mean_mib": 124.49330357142857,
-          "rss_peak_mib": 125.61328125,
-          "disk_peak_bytes": 53635561
-        },
-        {
-          "window_start_sec": 110.0,
-          "window_end_sec": 115.0,
-          "rss_sample_mean_mib": 125.58365885416667,
-          "rss_peak_mib": 125.6015625,
-          "disk_peak_bytes": 57625463
-        },
-        {
-          "window_start_sec": 115.0,
-          "window_end_sec": 120.0,
-          "rss_sample_mean_mib": 124.59765625,
-          "rss_peak_mib": 125.94921875,
-          "disk_peak_bytes": 62557942
-        },
-        {
-          "window_start_sec": 120.0,
-          "window_end_sec": 125.0,
-          "rss_sample_mean_mib": 124.9765625,
-          "rss_peak_mib": 125.00390625,
-          "disk_peak_bytes": null
-        },
-        {
-          "window_start_sec": 125.0,
-          "window_end_sec": 130.0,
-          "rss_sample_mean_mib": 124.05859375,
-          "rss_peak_mib": 125.9296875,
-          "disk_peak_bytes": 65929723
-        },
-        {
-          "window_start_sec": 130.0,
-          "window_end_sec": 135.0,
-          "rss_sample_mean_mib": 124.41324869791667,
-          "rss_peak_mib": 128.828125,
-          "disk_peak_bytes": 71377077
-        },
-        {
-          "window_start_sec": 135.0,
-          "window_end_sec": 140.0,
-          "rss_sample_mean_mib": 124.84029447115384,
-          "rss_peak_mib": 125.99609375,
-          "disk_peak_bytes": 75978612
-        },
-        {
-          "window_start_sec": 140.0,
-          "window_end_sec": 143.052,
-          "rss_sample_mean_mib": 131.6154296875,
-          "rss_peak_mib": 152.72265625,
-          "disk_peak_bytes": 129078695
-        }
-      ]
-    }
-  },
-  "session_measurements": {
-    "M1": {
-      "sessions": [
-        {
-          "session": "S1",
-          "status": "paused_rate_limit",
-          "colab_cpu": true,
-          "processed_attempts": 14,
-          "publications_reused": null,
-          "versions_reused": 19,
-          "profiler_sec": 261.958,
-          "child_wall_sec": 263.652,
-          "peak_rss_mib": 140.3,
-          "avg_rss_mib": 89.26,
-          "peak_disk_bytes": 36999671,
-          "final_disk_bytes": 20852232
-        }
-      ],
-      "totals": {
-        "all_sessions_colab_cpu": true,
-        "sessions_overlap": false,
-        "total_profiler_sec": 261.958,
-        "total_child_wall_sec": 263.652,
-        "processed_attempts": 14,
-        "unique_publications": null,
-        "max_session_peak_rss_mib": 140.3,
-        "session_time_weighted_avg_rss_mib": 89.26,
-        "max_session_peak_disk_bytes": 36999671
-      }
-    },
-    "M2": {
-      "sessions": [
-        {
-          "session": "S1",
-          "status": "completed_with_errors",
-          "colab_cpu": false,
-          "processed_attempts": 73,
-          "publications_reused": 0,
-          "versions_reused": null,
-          "profiler_sec": 143.052,
-          "child_wall_sec": null,
-          "peak_rss_mib": 152.72,
-          "avg_rss_mib": 121.62,
-          "peak_disk_bytes": 129078695,
-          "final_disk_bytes": 83183049
-        }
-      ],
-      "totals": {
-        "all_sessions_colab_cpu": false,
-        "sessions_overlap": false,
-        "total_profiler_sec": 143.052,
-        "total_child_wall_sec": null,
-        "processed_attempts": 73,
-        "unique_publications": null,
-        "max_session_peak_rss_mib": 152.72,
-        "session_time_weighted_avg_rss_mib": 121.61999999999999,
-        "max_session_peak_disk_bytes": 129078695
+    "resource_profiles": {
+      "DAT": null,
+      "TUAN": {
+        "window_sec": 60.0,
+        "rss_samples": 16884,
+        "disk_samples": 124,
+        "rows": [
+          {
+            "window_start_sec": 0.0,
+            "window_end_sec": 60.0,
+            "rss_sample_mean_mib": 170.5622641509434,
+            "rss_peak_mib": 722.6796875,
+            "disk_peak_bytes": 46720286
+          },
+          {
+            "window_start_sec": 60.0,
+            "window_end_sec": 120.0,
+            "rss_sample_mean_mib": 188.77022832491582,
+            "rss_peak_mib": 191.81640625,
+            "disk_peak_bytes": 148565308
+          },
+          {
+            "window_start_sec": 120.0,
+            "window_end_sec": 180.0,
+            "rss_sample_mean_mib": 191.50894835992906,
+            "rss_peak_mib": 191.6171875,
+            "disk_peak_bytes": 252235327
+          },
+          {
+            "window_start_sec": 180.0,
+            "window_end_sec": 240.0,
+            "rss_sample_mean_mib": 191.6785888671875,
+            "rss_peak_mib": 191.703125,
+            "disk_peak_bytes": 344642074
+          },
+          {
+            "window_start_sec": 240.0,
+            "window_end_sec": 300.0,
+            "rss_sample_mean_mib": 199.48708393199234,
+            "rss_peak_mib": 203.80078125,
+            "disk_peak_bytes": 446970013
+          },
+          {
+            "window_start_sec": 300.0,
+            "window_end_sec": 360.0,
+            "rss_sample_mean_mib": 204.02807772691082,
+            "rss_peak_mib": 204.05859375,
+            "disk_peak_bytes": 550826723
+          },
+          {
+            "window_start_sec": 360.0,
+            "window_end_sec": 420.0,
+            "rss_sample_mean_mib": 204.08142045454545,
+            "rss_peak_mib": 204.08984375,
+            "disk_peak_bytes": 648252758
+          },
+          {
+            "window_start_sec": 420.0,
+            "window_end_sec": 480.0,
+            "rss_sample_mean_mib": 204.1126689851097,
+            "rss_peak_mib": 204.15234375,
+            "disk_peak_bytes": 754813770
+          },
+          {
+            "window_start_sec": 480.0,
+            "window_end_sec": 540.0,
+            "rss_sample_mean_mib": 204.16306060878964,
+            "rss_peak_mib": 204.20703125,
+            "disk_peak_bytes": 841242872
+          },
+          {
+            "window_start_sec": 540.0,
+            "window_end_sec": 600.0,
+            "rss_sample_mean_mib": 207.8873161764706,
+            "rss_peak_mib": 210.109375,
+            "disk_peak_bytes": 935031219
+          },
+          {
+            "window_start_sec": 600.0,
+            "window_end_sec": 660.0,
+            "rss_sample_mean_mib": 210.1403928103147,
+            "rss_peak_mib": 210.15625,
+            "disk_peak_bytes": 1045042971
+          },
+          {
+            "window_start_sec": 660.0,
+            "window_end_sec": 720.0,
+            "rss_sample_mean_mib": 210.77013221153845,
+            "rss_peak_mib": 211.60546875,
+            "disk_peak_bytes": 1150706432
+          },
+          {
+            "window_start_sec": 720.0,
+            "window_end_sec": 780.0,
+            "rss_sample_mean_mib": 238.76244791666667,
+            "rss_peak_mib": 312.2109375,
+            "disk_peak_bytes": 1227076276
+          },
+          {
+            "window_start_sec": 780.0,
+            "window_end_sec": 840.0,
+            "rss_sample_mean_mib": 225.2296629152098,
+            "rss_peak_mib": 226.91796875,
+            "disk_peak_bytes": 1307747874
+          },
+          {
+            "window_start_sec": 840.0,
+            "window_end_sec": 900.0,
+            "rss_sample_mean_mib": 226.1053163785461,
+            "rss_peak_mib": 314.16796875,
+            "disk_peak_bytes": 1406570537
+          },
+          {
+            "window_start_sec": 900.0,
+            "window_end_sec": 960.0,
+            "rss_sample_mean_mib": 225.19445104562737,
+            "rss_peak_mib": 225.2109375,
+            "disk_peak_bytes": 1509093577
+          },
+          {
+            "window_start_sec": 960.0,
+            "window_end_sec": 1020.0,
+            "rss_sample_mean_mib": 225.21980497262774,
+            "rss_peak_mib": 225.22265625,
+            "disk_peak_bytes": 1602610291
+          },
+          {
+            "window_start_sec": 1020.0,
+            "window_end_sec": 1080.0,
+            "rss_sample_mean_mib": 228.17797074044586,
+            "rss_peak_mib": 410.81640625,
+            "disk_peak_bytes": 1705725925
+          },
+          {
+            "window_start_sec": 1080.0,
+            "window_end_sec": 1140.0,
+            "rss_sample_mean_mib": 225.45647898706898,
+            "rss_peak_mib": 226.36328125,
+            "disk_peak_bytes": 1794029907
+          },
+          {
+            "window_start_sec": 1140.0,
+            "window_end_sec": 1200.0,
+            "rss_sample_mean_mib": 226.37281976744185,
+            "rss_peak_mib": 226.375,
+            "disk_peak_bytes": 1894932437
+          },
+          {
+            "window_start_sec": 1200.0,
+            "window_end_sec": 1260.0,
+            "rss_sample_mean_mib": 235.58377259036143,
+            "rss_peak_mib": 313.47265625,
+            "disk_peak_bytes": 1980154545
+          },
+          {
+            "window_start_sec": 1260.0,
+            "window_end_sec": 1320.0,
+            "rss_sample_mean_mib": 229.88704637096774,
+            "rss_peak_mib": 229.90625,
+            "disk_peak_bytes": 2087448150
+          },
+          {
+            "window_start_sec": 1320.0,
+            "window_end_sec": 1380.0,
+            "rss_sample_mean_mib": 229.96996753246754,
+            "rss_peak_mib": 233.5859375,
+            "disk_peak_bytes": 2179971391
+          },
+          {
+            "window_start_sec": 1380.0,
+            "window_end_sec": 1440.0,
+            "rss_sample_mean_mib": 233.59681919642858,
+            "rss_peak_mib": 233.62890625,
+            "disk_peak_bytes": 2228789407
+          },
+          {
+            "window_start_sec": 1440.0,
+            "window_end_sec": 1500.0,
+            "rss_sample_mean_mib": 233.6322206439394,
+            "rss_peak_mib": 233.63671875,
+            "disk_peak_bytes": 2340689212
+          },
+          {
+            "window_start_sec": 1500.0,
+            "window_end_sec": 1560.0,
+            "rss_sample_mean_mib": 233.63963232260727,
+            "rss_peak_mib": 233.640625,
+            "disk_peak_bytes": 2440973500
+          },
+          {
+            "window_start_sec": 1560.0,
+            "window_end_sec": 1620.0,
+            "rss_sample_mean_mib": 233.66922387295082,
+            "rss_peak_mib": 233.67578125,
+            "disk_peak_bytes": 2536078093
+          },
+          {
+            "window_start_sec": 1620.0,
+            "window_end_sec": 1680.0,
+            "rss_sample_mean_mib": 244.20796342329547,
+            "rss_peak_mib": 300.69921875,
+            "disk_peak_bytes": 2607015655
+          },
+          {
+            "window_start_sec": 1680.0,
+            "window_end_sec": 1740.0,
+            "rss_sample_mean_mib": 214.96080674686192,
+            "rss_peak_mib": 756.0625,
+            "disk_peak_bytes": 2683515921
+          },
+          {
+            "window_start_sec": 1740.0,
+            "window_end_sec": 1800.0,
+            "rss_sample_mean_mib": 212.20089285714286,
+            "rss_peak_mib": 291.0234375,
+            "disk_peak_bytes": 2756562315
+          },
+          {
+            "window_start_sec": 1800.0,
+            "window_end_sec": 1860.0,
+            "rss_sample_mean_mib": 221.62859488224638,
+            "rss_peak_mib": 292.50390625,
+            "disk_peak_bytes": 2841614656
+          },
+          {
+            "window_start_sec": 1860.0,
+            "window_end_sec": 1920.0,
+            "rss_sample_mean_mib": 215.51483319256758,
+            "rss_peak_mib": 286.2265625,
+            "disk_peak_bytes": 2935193465
+          },
+          {
+            "window_start_sec": 1920.0,
+            "window_end_sec": 1980.0,
+            "rss_sample_mean_mib": 212.83522595260223,
+            "rss_peak_mib": 441.0625,
+            "disk_peak_bytes": 3035186332
+          },
+          {
+            "window_start_sec": 1980.0,
+            "window_end_sec": 2040.0,
+            "rss_sample_mean_mib": 207.42352111204013,
+            "rss_peak_mib": 207.4375,
+            "disk_peak_bytes": 3133210987
+          },
+          {
+            "window_start_sec": 2040.0,
+            "window_end_sec": 2100.0,
+            "rss_sample_mean_mib": 212.60618867320818,
+            "rss_peak_mib": 345.421875,
+            "disk_peak_bytes": 3228250559
+          },
+          {
+            "window_start_sec": 2100.0,
+            "window_end_sec": 2160.0,
+            "rss_sample_mean_mib": 209.63771101286173,
+            "rss_peak_mib": 211.1796875,
+            "disk_peak_bytes": 3329857635
+          },
+          {
+            "window_start_sec": 2160.0,
+            "window_end_sec": 2220.0,
+            "rss_sample_mean_mib": 211.1796875,
+            "rss_peak_mib": 211.1796875,
+            "disk_peak_bytes": 3434426123
+          },
+          {
+            "window_start_sec": 2220.0,
+            "window_end_sec": 2280.0,
+            "rss_sample_mean_mib": 211.1829133064516,
+            "rss_peak_mib": 211.2421875,
+            "disk_peak_bytes": 3491138429
+          },
+          {
+            "window_start_sec": 2280.0,
+            "window_end_sec": 2340.0,
+            "rss_sample_mean_mib": 210.28428622159092,
+            "rss_peak_mib": 211.2421875,
+            "disk_peak_bytes": 3579128079
+          },
+          {
+            "window_start_sec": 2340.0,
+            "window_end_sec": 2400.0,
+            "rss_sample_mean_mib": 210.0353948954984,
+            "rss_peak_mib": 210.0859375,
+            "disk_peak_bytes": 3683540010
+          },
+          {
+            "window_start_sec": 2400.0,
+            "window_end_sec": 2460.0,
+            "rss_sample_mean_mib": 215.9499000726744,
+            "rss_peak_mib": 299.06640625,
+            "disk_peak_bytes": 3785043508
+          },
+          {
+            "window_start_sec": 2460.0,
+            "window_end_sec": 2520.0,
+            "rss_sample_mean_mib": 220.89279851653697,
+            "rss_peak_mib": 221.16796875,
+            "disk_peak_bytes": 3887788436
+          },
+          {
+            "window_start_sec": 2520.0,
+            "window_end_sec": 2580.0,
+            "rss_sample_mean_mib": 221.16802345938376,
+            "rss_peak_mib": 221.171875,
+            "disk_peak_bytes": 3987036319
+          },
+          {
+            "window_start_sec": 2580.0,
+            "window_end_sec": 2640.0,
+            "rss_sample_mean_mib": 221.171875,
+            "rss_peak_mib": 221.171875,
+            "disk_peak_bytes": 4093347699
+          },
+          {
+            "window_start_sec": 2640.0,
+            "window_end_sec": 2700.0,
+            "rss_sample_mean_mib": 247.92108658256882,
+            "rss_peak_mib": 379.19140625,
+            "disk_peak_bytes": 4157585918
+          },
+          {
+            "window_start_sec": 2700.0,
+            "window_end_sec": 2760.0,
+            "rss_sample_mean_mib": 228.490479390681,
+            "rss_peak_mib": 228.65625,
+            "disk_peak_bytes": 4260835475
+          },
+          {
+            "window_start_sec": 2760.0,
+            "window_end_sec": 2820.0,
+            "rss_sample_mean_mib": 240.01655016447367,
+            "rss_peak_mib": 789.36328125,
+            "disk_peak_bytes": 4334007316
+          },
+          {
+            "window_start_sec": 2820.0,
+            "window_end_sec": 2880.0,
+            "rss_sample_mean_mib": 230.43905378717471,
+            "rss_peak_mib": 314.2734375,
+            "disk_peak_bytes": 4386680650
+          },
+          {
+            "window_start_sec": 2880.0,
+            "window_end_sec": 2940.0,
+            "rss_sample_mean_mib": 237.25152784778226,
+            "rss_peak_mib": 314.2734375,
+            "disk_peak_bytes": 4463745667
+          },
+          {
+            "window_start_sec": 2940.0,
+            "window_end_sec": 3000.0,
+            "rss_sample_mean_mib": 230.51321632037534,
+            "rss_peak_mib": 230.56640625,
+            "disk_peak_bytes": 4569421168
+          },
+          {
+            "window_start_sec": 3000.0,
+            "window_end_sec": 3060.0,
+            "rss_sample_mean_mib": 230.56640625,
+            "rss_peak_mib": 230.56640625,
+            "disk_peak_bytes": 4673961221
+          },
+          {
+            "window_start_sec": 3060.0,
+            "window_end_sec": 3120.0,
+            "rss_sample_mean_mib": 233.29244896673387,
+            "rss_peak_mib": 235.3828125,
+            "disk_peak_bytes": 4774347091
+          },
+          {
+            "window_start_sec": 3120.0,
+            "window_end_sec": 3180.0,
+            "rss_sample_mean_mib": 235.38531788793102,
+            "rss_peak_mib": 235.390625,
+            "disk_peak_bytes": 4884100720
+          },
+          {
+            "window_start_sec": 3180.0,
+            "window_end_sec": 3240.0,
+            "rss_sample_mean_mib": 235.390625,
+            "rss_peak_mib": 235.390625,
+            "disk_peak_bytes": 4990685345
+          },
+          {
+            "window_start_sec": 3240.0,
+            "window_end_sec": 3300.0,
+            "rss_sample_mean_mib": 235.390625,
+            "rss_peak_mib": 235.390625,
+            "disk_peak_bytes": 5085225828
+          },
+          {
+            "window_start_sec": 3300.0,
+            "window_end_sec": 3360.0,
+            "rss_sample_mean_mib": 235.390625,
+            "rss_peak_mib": 235.390625,
+            "disk_peak_bytes": 5132588087
+          },
+          {
+            "window_start_sec": 3360.0,
+            "window_end_sec": 3420.0,
+            "rss_sample_mean_mib": 246.9485184262948,
+            "rss_peak_mib": 330.6015625,
+            "disk_peak_bytes": 5223323490
+          },
+          {
+            "window_start_sec": 3420.0,
+            "window_end_sec": 3480.0,
+            "rss_sample_mean_mib": 239.05502232142857,
+            "rss_peak_mib": 239.0703125,
+            "disk_peak_bytes": 5330320510
+          },
+          {
+            "window_start_sec": 3480.0,
+            "window_end_sec": 3540.0,
+            "rss_sample_mean_mib": 252.3570455848624,
+            "rss_peak_mib": 322.18359375,
+            "disk_peak_bytes": 5389042909
+          },
+          {
+            "window_start_sec": 3540.0,
+            "window_end_sec": 3600.0,
+            "rss_sample_mean_mib": 237.3179162289916,
+            "rss_peak_mib": 238.45703125,
+            "disk_peak_bytes": 5961770476
+          },
+          {
+            "window_start_sec": 3600.0,
+            "window_end_sec": 3660.0,
+            "rss_sample_mean_mib": 239.02415966386553,
+            "rss_peak_mib": 239.35546875,
+            "disk_peak_bytes": 7554708972
+          },
+          {
+            "window_start_sec": 3660.0,
+            "window_end_sec": 3720.0,
+            "rss_sample_mean_mib": 239.4002130681818,
+            "rss_peak_mib": 239.48828125,
+            "disk_peak_bytes": 8415823340
+          },
+          {
+            "window_start_sec": 3720.0,
+            "window_end_sec": 3777.627,
+            "rss_sample_mean_mib": 228.45572916666666,
+            "rss_peak_mib": 239.14453125,
+            "disk_peak_bytes": 8415823340
+          }
+        ]
+      },
+      "TAN": {
+        "window_sec": 60.0,
+        "rss_samples": 16807,
+        "disk_samples": 122,
+        "rows": [
+          {
+            "window_start_sec": 0.0,
+            "window_end_sec": 60.0,
+            "rss_sample_mean_mib": 225.17095762310606,
+            "rss_peak_mib": 284.16796875,
+            "disk_peak_bytes": 4151245
+          },
+          {
+            "window_start_sec": 60.0,
+            "window_end_sec": 120.0,
+            "rss_sample_mean_mib": 199.3478218860424,
+            "rss_peak_mib": 281.20703125,
+            "disk_peak_bytes": 63934193
+          },
+          {
+            "window_start_sec": 120.0,
+            "window_end_sec": 180.0,
+            "rss_sample_mean_mib": 200.5444694562147,
+            "rss_peak_mib": 281.21484375,
+            "disk_peak_bytes": 147372402
+          },
+          {
+            "window_start_sec": 180.0,
+            "window_end_sec": 240.0,
+            "rss_sample_mean_mib": 202.7677868150685,
+            "rss_peak_mib": 294.62890625,
+            "disk_peak_bytes": 247535990
+          },
+          {
+            "window_start_sec": 240.0,
+            "window_end_sec": 300.0,
+            "rss_sample_mean_mib": 199.85946406758958,
+            "rss_peak_mib": 205.421875,
+            "disk_peak_bytes": 347023541
+          },
+          {
+            "window_start_sec": 300.0,
+            "window_end_sec": 360.0,
+            "rss_sample_mean_mib": 205.71711394074674,
+            "rss_peak_mib": 288.68359375,
+            "disk_peak_bytes": 438119581
+          },
+          {
+            "window_start_sec": 360.0,
+            "window_end_sec": 420.0,
+            "rss_sample_mean_mib": 208.03410511363637,
+            "rss_peak_mib": 209.1796875,
+            "disk_peak_bytes": 534508377
+          },
+          {
+            "window_start_sec": 420.0,
+            "window_end_sec": 480.0,
+            "rss_sample_mean_mib": 228.43896269273128,
+            "rss_peak_mib": 476.52734375,
+            "disk_peak_bytes": 598699680
+          },
+          {
+            "window_start_sec": 480.0,
+            "window_end_sec": 540.0,
+            "rss_sample_mean_mib": 213.17712918133802,
+            "rss_peak_mib": 213.203125,
+            "disk_peak_bytes": 680573202
+          },
+          {
+            "window_start_sec": 540.0,
+            "window_end_sec": 600.0,
+            "rss_sample_mean_mib": 216.63497421116506,
+            "rss_peak_mib": 221.1171875,
+            "disk_peak_bytes": 758457813
+          },
+          {
+            "window_start_sec": 600.0,
+            "window_end_sec": 660.0,
+            "rss_sample_mean_mib": 227.2115670196281,
+            "rss_peak_mib": 498.2734375,
+            "disk_peak_bytes": 857057587
+          },
+          {
+            "window_start_sec": 660.0,
+            "window_end_sec": 720.0,
+            "rss_sample_mean_mib": 212.37779970136518,
+            "rss_peak_mib": 221.5390625,
+            "disk_peak_bytes": 943035183
+          },
+          {
+            "window_start_sec": 720.0,
+            "window_end_sec": 780.0,
+            "rss_sample_mean_mib": 214.03560267857142,
+            "rss_peak_mib": 214.08203125,
+            "disk_peak_bytes": 1045834097
+          },
+          {
+            "window_start_sec": 780.0,
+            "window_end_sec": 840.0,
+            "rss_sample_mean_mib": 220.0512314126394,
+            "rss_peak_mib": 338.83203125,
+            "disk_peak_bytes": 1126555739
+          },
+          {
+            "window_start_sec": 840.0,
+            "window_end_sec": 900.0,
+            "rss_sample_mean_mib": 226.25822953736656,
+            "rss_peak_mib": 310.8125,
+            "disk_peak_bytes": 1209395029
+          },
+          {
+            "window_start_sec": 900.0,
+            "window_end_sec": 960.0,
+            "rss_sample_mean_mib": 222.08033014112902,
+            "rss_peak_mib": 487.984375,
+            "disk_peak_bytes": 1315184642
+          },
+          {
+            "window_start_sec": 960.0,
+            "window_end_sec": 1020.0,
+            "rss_sample_mean_mib": 229.43528554137325,
+            "rss_peak_mib": 307.29296875,
+            "disk_peak_bytes": 1406881992
+          },
+          {
+            "window_start_sec": 1020.0,
+            "window_end_sec": 1080.0,
+            "rss_sample_mean_mib": 224.14453125,
+            "rss_peak_mib": 224.14453125,
+            "disk_peak_bytes": 1496451990
+          },
+          {
+            "window_start_sec": 1080.0,
+            "window_end_sec": 1140.0,
+            "rss_sample_mean_mib": 224.15761780362777,
+            "rss_peak_mib": 224.1640625,
+            "disk_peak_bytes": 1598399625
+          },
+          {
+            "window_start_sec": 1140.0,
+            "window_end_sec": 1200.0,
+            "rss_sample_mean_mib": 224.16782832924838,
+            "rss_peak_mib": 224.16796875,
+            "disk_peak_bytes": 1701276274
+          },
+          {
+            "window_start_sec": 1200.0,
+            "window_end_sec": 1260.0,
+            "rss_sample_mean_mib": 224.16796875,
+            "rss_peak_mib": 224.16796875,
+            "disk_peak_bytes": 1809949408
+          },
+          {
+            "window_start_sec": 1260.0,
+            "window_end_sec": 1320.0,
+            "rss_sample_mean_mib": 214.47055921052632,
+            "rss_peak_mib": 241.1015625,
+            "disk_peak_bytes": 1896706875
+          },
+          {
+            "window_start_sec": 1320.0,
+            "window_end_sec": 1380.0,
+            "rss_sample_mean_mib": 217.60458754208753,
+            "rss_peak_mib": 337.171875,
+            "disk_peak_bytes": 1938131214
+          },
+          {
+            "window_start_sec": 1380.0,
+            "window_end_sec": 1440.0,
+            "rss_sample_mean_mib": 223.15554795506912,
+            "rss_peak_mib": 307.609375,
+            "disk_peak_bytes": 2040541745
+          },
+          {
+            "window_start_sec": 1440.0,
+            "window_end_sec": 1500.0,
+            "rss_sample_mean_mib": 223.85903139467592,
+            "rss_peak_mib": 307.51171875,
+            "disk_peak_bytes": 2114854464
+          },
+          {
+            "window_start_sec": 1500.0,
+            "window_end_sec": 1560.0,
+            "rss_sample_mean_mib": 221.12002017798014,
+            "rss_peak_mib": 307.83203125,
+            "disk_peak_bytes": 2210553438
+          },
+          {
+            "window_start_sec": 1560.0,
+            "window_end_sec": 1620.0,
+            "rss_sample_mean_mib": 228.06560083762886,
+            "rss_peak_mib": 315.06640625,
+            "disk_peak_bytes": 2307547091
+          },
+          {
+            "window_start_sec": 1620.0,
+            "window_end_sec": 1680.0,
+            "rss_sample_mean_mib": 228.49065504807692,
+            "rss_peak_mib": 305.1171875,
+            "disk_peak_bytes": 2385828045
+          },
+          {
+            "window_start_sec": 1680.0,
+            "window_end_sec": 1740.0,
+            "rss_sample_mean_mib": 222.21875,
+            "rss_peak_mib": 222.21875,
+            "disk_peak_bytes": 2486222352
+          },
+          {
+            "window_start_sec": 1740.0,
+            "window_end_sec": 1800.0,
+            "rss_sample_mean_mib": 222.22123927696077,
+            "rss_peak_mib": 222.22265625,
+            "disk_peak_bytes": 2591080033
+          },
+          {
+            "window_start_sec": 1800.0,
+            "window_end_sec": 1860.0,
+            "rss_sample_mean_mib": 222.22265625,
+            "rss_peak_mib": 222.22265625,
+            "disk_peak_bytes": 2699692494
+          },
+          {
+            "window_start_sec": 1860.0,
+            "window_end_sec": 1920.0,
+            "rss_sample_mean_mib": 221.861449249031,
+            "rss_peak_mib": 222.22265625,
+            "disk_peak_bytes": 2737732083
+          },
+          {
+            "window_start_sec": 1920.0,
+            "window_end_sec": 1980.0,
+            "rss_sample_mean_mib": 235.72259221311475,
+            "rss_peak_mib": 316.65234375,
+            "disk_peak_bytes": 2821350121
+          },
+          {
+            "window_start_sec": 1980.0,
+            "window_end_sec": 2040.0,
+            "rss_sample_mean_mib": 225.8638233985765,
+            "rss_peak_mib": 313.84375,
+            "disk_peak_bytes": 2892707272
+          },
+          {
+            "window_start_sec": 2040.0,
+            "window_end_sec": 2100.0,
+            "rss_sample_mean_mib": 224.9375,
+            "rss_peak_mib": 224.9375,
+            "disk_peak_bytes": 2985521413
+          },
+          {
+            "window_start_sec": 2100.0,
+            "window_end_sec": 2160.0,
+            "rss_sample_mean_mib": 224.9375,
+            "rss_peak_mib": 224.9375,
+            "disk_peak_bytes": 3073638847
+          },
+          {
+            "window_start_sec": 2160.0,
+            "window_end_sec": 2220.0,
+            "rss_sample_mean_mib": 230.40779194078948,
+            "rss_peak_mib": 308.0859375,
+            "disk_peak_bytes": 3166394791
+          },
+          {
+            "window_start_sec": 2220.0,
+            "window_end_sec": 2280.0,
+            "rss_sample_mean_mib": 224.9375,
+            "rss_peak_mib": 224.9375,
+            "disk_peak_bytes": 3281353623
+          },
+          {
+            "window_start_sec": 2280.0,
+            "window_end_sec": 2340.0,
+            "rss_sample_mean_mib": 252.4639966114458,
+            "rss_peak_mib": 362.31640625,
+            "disk_peak_bytes": 3299940958
+          },
+          {
+            "window_start_sec": 2340.0,
+            "window_end_sec": 2400.0,
+            "rss_sample_mean_mib": 224.9375,
+            "rss_peak_mib": 224.9375,
+            "disk_peak_bytes": 3386359116
+          },
+          {
+            "window_start_sec": 2400.0,
+            "window_end_sec": 2460.0,
+            "rss_sample_mean_mib": 225.96675171604045,
+            "rss_peak_mib": 227.19921875,
+            "disk_peak_bytes": 3489011697
+          },
+          {
+            "window_start_sec": 2460.0,
+            "window_end_sec": 2520.0,
+            "rss_sample_mean_mib": 237.50833992616035,
+            "rss_peak_mib": 319.31640625,
+            "disk_peak_bytes": 3564133697
+          },
+          {
+            "window_start_sec": 2520.0,
+            "window_end_sec": 2580.0,
+            "rss_sample_mean_mib": 234.49334649725276,
+            "rss_peak_mib": 310.33203125,
+            "disk_peak_bytes": 3637071278
+          },
+          {
+            "window_start_sec": 2580.0,
+            "window_end_sec": 2640.0,
+            "rss_sample_mean_mib": 293.0680881076389,
+            "rss_peak_mib": 400.50390625,
+            "disk_peak_bytes": 3669127064
+          },
+          {
+            "window_start_sec": 2640.0,
+            "window_end_sec": 2700.0,
+            "rss_sample_mean_mib": 237.2377949297189,
+            "rss_peak_mib": 347.95703125,
+            "disk_peak_bytes": 3760035998
+          },
+          {
+            "window_start_sec": 2700.0,
+            "window_end_sec": 2760.0,
+            "rss_sample_mean_mib": 267.29460047468353,
+            "rss_peak_mib": 351.31640625,
+            "disk_peak_bytes": 3829579385
+          },
+          {
+            "window_start_sec": 2760.0,
+            "window_end_sec": 2820.0,
+            "rss_sample_mean_mib": 268.16993936567167,
+            "rss_peak_mib": 268.171875,
+            "disk_peak_bytes": 3938591592
+          },
+          {
+            "window_start_sec": 2820.0,
+            "window_end_sec": 2880.0,
+            "rss_sample_mean_mib": 268.171875,
+            "rss_peak_mib": 268.171875,
+            "disk_peak_bytes": 4037566733
+          },
+          {
+            "window_start_sec": 2880.0,
+            "window_end_sec": 2940.0,
+            "rss_sample_mean_mib": 268.1784572849026,
+            "rss_peak_mib": 268.1796875,
+            "disk_peak_bytes": 4088469942
+          },
+          {
+            "window_start_sec": 2940.0,
+            "window_end_sec": 3000.0,
+            "rss_sample_mean_mib": 288.1225493808962,
+            "rss_peak_mib": 362.9609375,
+            "disk_peak_bytes": 4181518092
+          },
+          {
+            "window_start_sec": 3000.0,
+            "window_end_sec": 3060.0,
+            "rss_sample_mean_mib": 281.63564453125,
+            "rss_peak_mib": 362.90625,
+            "disk_peak_bytes": 4226062521
+          },
+          {
+            "window_start_sec": 3060.0,
+            "window_end_sec": 3120.0,
+            "rss_sample_mean_mib": 263.6130078125,
+            "rss_peak_mib": 271.6015625,
+            "disk_peak_bytes": 4321980970
+          },
+          {
+            "window_start_sec": 3120.0,
+            "window_end_sec": 3180.0,
+            "rss_sample_mean_mib": 263.04282474078343,
+            "rss_peak_mib": 329.71484375,
+            "disk_peak_bytes": 4397547969
+          },
+          {
+            "window_start_sec": 3180.0,
+            "window_end_sec": 3240.0,
+            "rss_sample_mean_mib": 257.0798488107287,
+            "rss_peak_mib": 334.51953125,
+            "disk_peak_bytes": 4448832356
+          },
+          {
+            "window_start_sec": 3240.0,
+            "window_end_sec": 3300.0,
+            "rss_sample_mean_mib": 249.78024384469697,
+            "rss_peak_mib": 335.55078125,
+            "disk_peak_bytes": 4539252434
+          },
+          {
+            "window_start_sec": 3300.0,
+            "window_end_sec": 3360.0,
+            "rss_sample_mean_mib": 263.19397179555085,
+            "rss_peak_mib": 340.05078125,
+            "disk_peak_bytes": 4603204656
+          },
+          {
+            "window_start_sec": 3360.0,
+            "window_end_sec": 3420.0,
+            "rss_sample_mean_mib": 253.7634336890244,
+            "rss_peak_mib": 339.9375,
+            "disk_peak_bytes": 4689025545
+          },
+          {
+            "window_start_sec": 3420.0,
+            "window_end_sec": 3480.0,
+            "rss_sample_mean_mib": 248.89181004213484,
+            "rss_peak_mib": 335.5234375,
+            "disk_peak_bytes": 4730191442
+          },
+          {
+            "window_start_sec": 3480.0,
+            "window_end_sec": 3540.0,
+            "rss_sample_mean_mib": 292.06528645833333,
+            "rss_peak_mib": 325.7109375,
+            "disk_peak_bytes": 4869634813
+          },
+          {
+            "window_start_sec": 3540.0,
+            "window_end_sec": 3600.0,
+            "rss_sample_mean_mib": 291.95911458333336,
+            "rss_peak_mib": 299.3671875,
+            "disk_peak_bytes": 5964217085
+          },
+          {
+            "window_start_sec": 3600.0,
+            "window_end_sec": 3660.0,
+            "rss_sample_mean_mib": 289.63707682291664,
+            "rss_peak_mib": 291.00390625,
+            "disk_peak_bytes": 7544122109
+          },
+          {
+            "window_start_sec": 3660.0,
+            "window_end_sec": 3720.0,
+            "rss_sample_mean_mib": 286.4234834558824,
+            "rss_peak_mib": 289.71484375,
+            "disk_peak_bytes": 7544122109
+          },
+          {
+            "window_start_sec": 3720.0,
+            "window_end_sec": 3740.636,
+            "rss_sample_mean_mib": 283.3536518895349,
+            "rss_peak_mib": 283.625,
+            "disk_peak_bytes": 7544122109
+          }
+        ]
+      },
+      "TRI": {
+        "window_sec": 60.0,
+        "rss_samples": 17062,
+        "disk_samples": 128,
+        "rows": [
+          {
+            "window_start_sec": 0.0,
+            "window_end_sec": 60.0,
+            "rss_sample_mean_mib": 167.24176045016077,
+            "rss_peak_mib": 176.83984375,
+            "disk_peak_bytes": 48057925
+          },
+          {
+            "window_start_sec": 60.0,
+            "window_end_sec": 120.0,
+            "rss_sample_mean_mib": 174.00853430706522,
+            "rss_peak_mib": 180.2109375,
+            "disk_peak_bytes": 153195215
+          },
+          {
+            "window_start_sec": 120.0,
+            "window_end_sec": 180.0,
+            "rss_sample_mean_mib": 182.68239688552188,
+            "rss_peak_mib": 269.9140625,
+            "disk_peak_bytes": 253353830
+          },
+          {
+            "window_start_sec": 180.0,
+            "window_end_sec": 240.0,
+            "rss_sample_mean_mib": 179.57805879237287,
+            "rss_peak_mib": 181.2578125,
+            "disk_peak_bytes": 333819325
+          },
+          {
+            "window_start_sec": 240.0,
+            "window_end_sec": 300.0,
+            "rss_sample_mean_mib": 192.15293932174887,
+            "rss_peak_mib": 457.2265625,
+            "disk_peak_bytes": 422967551
+          },
+          {
+            "window_start_sec": 300.0,
+            "window_end_sec": 360.0,
+            "rss_sample_mean_mib": 195.67135959201389,
+            "rss_peak_mib": 206.08203125,
+            "disk_peak_bytes": 509774773
+          },
+          {
+            "window_start_sec": 360.0,
+            "window_end_sec": 420.0,
+            "rss_sample_mean_mib": 226.44413154069767,
+            "rss_peak_mib": 321.50390625,
+            "disk_peak_bytes": 584376226
+          },
+          {
+            "window_start_sec": 420.0,
+            "window_end_sec": 480.0,
+            "rss_sample_mean_mib": 218.19380595730027,
+            "rss_peak_mib": 297.96484375,
+            "disk_peak_bytes": 637916767
+          },
+          {
+            "window_start_sec": 480.0,
+            "window_end_sec": 540.0,
+            "rss_sample_mean_mib": 223.98839613970588,
+            "rss_peak_mib": 313.34375,
+            "disk_peak_bytes": 727605273
+          },
+          {
+            "window_start_sec": 540.0,
+            "window_end_sec": 600.0,
+            "rss_sample_mean_mib": 237.69281096059115,
+            "rss_peak_mib": 304.7734375,
+            "disk_peak_bytes": 785239465
+          },
+          {
+            "window_start_sec": 600.0,
+            "window_end_sec": 660.0,
+            "rss_sample_mean_mib": 234.6470858564014,
+            "rss_peak_mib": 320.5625,
+            "disk_peak_bytes": 877239172
+          },
+          {
+            "window_start_sec": 660.0,
+            "window_end_sec": 720.0,
+            "rss_sample_mean_mib": 230.74740484429066,
+            "rss_peak_mib": 320.01171875,
+            "disk_peak_bytes": 942960323
+          },
+          {
+            "window_start_sec": 720.0,
+            "window_end_sec": 780.0,
+            "rss_sample_mean_mib": 228.0487811426117,
+            "rss_peak_mib": 314.17578125,
+            "disk_peak_bytes": 1038728658
+          },
+          {
+            "window_start_sec": 780.0,
+            "window_end_sec": 840.0,
+            "rss_sample_mean_mib": 234.30808365549828,
+            "rss_peak_mib": 493.76171875,
+            "disk_peak_bytes": 1111167576
+          },
+          {
+            "window_start_sec": 840.0,
+            "window_end_sec": 900.0,
+            "rss_sample_mean_mib": 231.6552813770325,
+            "rss_peak_mib": 501.515625,
+            "disk_peak_bytes": 1206046970
+          },
+          {
+            "window_start_sec": 900.0,
+            "window_end_sec": 960.0,
+            "rss_sample_mean_mib": 234.95567850194553,
+            "rss_peak_mib": 499.57421875,
+            "disk_peak_bytes": 1272193179
+          },
+          {
+            "window_start_sec": 960.0,
+            "window_end_sec": 1020.0,
+            "rss_sample_mean_mib": 226.82585966542752,
+            "rss_peak_mib": 226.828125,
+            "disk_peak_bytes": 1379722710
+          },
+          {
+            "window_start_sec": 1020.0,
+            "window_end_sec": 1080.0,
+            "rss_sample_mean_mib": 233.53250403597787,
+            "rss_peak_mib": 493.88671875,
+            "disk_peak_bytes": 1474761270
+          },
+          {
+            "window_start_sec": 1080.0,
+            "window_end_sec": 1140.0,
+            "rss_sample_mean_mib": 229.96894914215687,
+            "rss_peak_mib": 364.1015625,
+            "disk_peak_bytes": 1543558907
+          },
+          {
+            "window_start_sec": 1140.0,
+            "window_end_sec": 1200.0,
+            "rss_sample_mean_mib": 228.45115894039736,
+            "rss_peak_mib": 360.3359375,
+            "disk_peak_bytes": 1640733846
+          },
+          {
+            "window_start_sec": 1200.0,
+            "window_end_sec": 1260.0,
+            "rss_sample_mean_mib": 226.86845195086704,
+            "rss_peak_mib": 226.8984375,
+            "disk_peak_bytes": 1753041800
+          },
+          {
+            "window_start_sec": 1260.0,
+            "window_end_sec": 1320.0,
+            "rss_sample_mean_mib": 228.3782571752266,
+            "rss_peak_mib": 315.8828125,
+            "disk_peak_bytes": 1854681552
+          },
+          {
+            "window_start_sec": 1320.0,
+            "window_end_sec": 1380.0,
+            "rss_sample_mean_mib": 226.8984375,
+            "rss_peak_mib": 226.8984375,
+            "disk_peak_bytes": 1891785992
+          },
+          {
+            "window_start_sec": 1380.0,
+            "window_end_sec": 1440.0,
+            "rss_sample_mean_mib": 226.88566854508196,
+            "rss_peak_mib": 226.8984375,
+            "disk_peak_bytes": 2003682063
+          },
+          {
+            "window_start_sec": 1440.0,
+            "window_end_sec": 1500.0,
+            "rss_sample_mean_mib": 228.39659150843883,
+            "rss_peak_mib": 311.94140625,
+            "disk_peak_bytes": 2080497563
+          },
+          {
+            "window_start_sec": 1500.0,
+            "window_end_sec": 1560.0,
+            "rss_sample_mean_mib": 224.32198106374173,
+            "rss_peak_mib": 312.26953125,
+            "disk_peak_bytes": 2171383320
+          },
+          {
+            "window_start_sec": 1560.0,
+            "window_end_sec": 1620.0,
+            "rss_sample_mean_mib": 224.97186653880865,
+            "rss_peak_mib": 497.34765625,
+            "disk_peak_bytes": 2259100028
+          },
+          {
+            "window_start_sec": 1620.0,
+            "window_end_sec": 1680.0,
+            "rss_sample_mean_mib": 265.1321753102837,
+            "rss_peak_mib": 344.76953125,
+            "disk_peak_bytes": 2305404345
+          },
+          {
+            "window_start_sec": 1680.0,
+            "window_end_sec": 1740.0,
+            "rss_sample_mean_mib": 249.78899243273543,
+            "rss_peak_mib": 315.90625,
+            "disk_peak_bytes": 2343663230
+          },
+          {
+            "window_start_sec": 1740.0,
+            "window_end_sec": 1800.0,
+            "rss_sample_mean_mib": 240.73409991197184,
+            "rss_peak_mib": 358.50390625,
+            "disk_peak_bytes": 2430482156
+          },
+          {
+            "window_start_sec": 1800.0,
+            "window_end_sec": 1860.0,
+            "rss_sample_mean_mib": 236.81678968558282,
+            "rss_peak_mib": 316.90234375,
+            "disk_peak_bytes": 2515284633
+          },
+          {
+            "window_start_sec": 1860.0,
+            "window_end_sec": 1920.0,
+            "rss_sample_mean_mib": 254.0596043221393,
+            "rss_peak_mib": 326.8359375,
+            "disk_peak_bytes": 2542555934
+          },
+          {
+            "window_start_sec": 1920.0,
+            "window_end_sec": 1980.0,
+            "rss_sample_mean_mib": 242.50116930509867,
+            "rss_peak_mib": 327.78125,
+            "disk_peak_bytes": 2615509964
+          },
+          {
+            "window_start_sec": 1980.0,
+            "window_end_sec": 2040.0,
+            "rss_sample_mean_mib": 238.29453363914374,
+            "rss_peak_mib": 238.3125,
+            "disk_peak_bytes": 2709636747
+          },
+          {
+            "window_start_sec": 2040.0,
+            "window_end_sec": 2100.0,
+            "rss_sample_mean_mib": 246.19563240840517,
+            "rss_peak_mib": 321.4609375,
+            "disk_peak_bytes": 2787930631
+          },
+          {
+            "window_start_sec": 2100.0,
+            "window_end_sec": 2160.0,
+            "rss_sample_mean_mib": 238.31096199912892,
+            "rss_peak_mib": 238.3125,
+            "disk_peak_bytes": 2881698864
+          },
+          {
+            "window_start_sec": 2160.0,
+            "window_end_sec": 2220.0,
+            "rss_sample_mean_mib": 245.47201033464566,
+            "rss_peak_mib": 329.23828125,
+            "disk_peak_bytes": 2964591740
+          },
+          {
+            "window_start_sec": 2220.0,
+            "window_end_sec": 2280.0,
+            "rss_sample_mean_mib": 241.10872844827585,
+            "rss_peak_mib": 329.80859375,
+            "disk_peak_bytes": 3061821241
+          },
+          {
+            "window_start_sec": 2280.0,
+            "window_end_sec": 2340.0,
+            "rss_sample_mean_mib": 250.77460382109004,
+            "rss_peak_mib": 507.73046875,
+            "disk_peak_bytes": 3126103893
+          },
+          {
+            "window_start_sec": 2340.0,
+            "window_end_sec": 2400.0,
+            "rss_sample_mean_mib": 251.2611555232558,
+            "rss_peak_mib": 318.375,
+            "disk_peak_bytes": 3170048698
+          },
+          {
+            "window_start_sec": 2400.0,
+            "window_end_sec": 2460.0,
+            "rss_sample_mean_mib": 240.19140625,
+            "rss_peak_mib": 323.9765625,
+            "disk_peak_bytes": 3258599079
+          },
+          {
+            "window_start_sec": 2460.0,
+            "window_end_sec": 2520.0,
+            "rss_sample_mean_mib": 230.9296875,
+            "rss_peak_mib": 230.9296875,
+            "disk_peak_bytes": 3309586287
+          },
+          {
+            "window_start_sec": 2520.0,
+            "window_end_sec": 2580.0,
+            "rss_sample_mean_mib": 251.7576664719626,
+            "rss_peak_mib": 323.08984375,
+            "disk_peak_bytes": 3369566437
+          },
+          {
+            "window_start_sec": 2580.0,
+            "window_end_sec": 2640.0,
+            "rss_sample_mean_mib": 272.13978794642856,
+            "rss_peak_mib": 325.484375,
+            "disk_peak_bytes": 3422977823
+          },
+          {
+            "window_start_sec": 2640.0,
+            "window_end_sec": 2700.0,
+            "rss_sample_mean_mib": 246.08420325969828,
+            "rss_peak_mib": 326.109375,
+            "disk_peak_bytes": 3485096944
+          },
+          {
+            "window_start_sec": 2700.0,
+            "window_end_sec": 2760.0,
+            "rss_sample_mean_mib": 236.02173295454546,
+            "rss_peak_mib": 507.41015625,
+            "disk_peak_bytes": 3555665161
+          },
+          {
+            "window_start_sec": 2760.0,
+            "window_end_sec": 2820.0,
+            "rss_sample_mean_mib": 234.9493740443425,
+            "rss_peak_mib": 324.20703125,
+            "disk_peak_bytes": 3660198812
+          },
+          {
+            "window_start_sec": 2820.0,
+            "window_end_sec": 2880.0,
+            "rss_sample_mean_mib": 235.95317963286712,
+            "rss_peak_mib": 237.00390625,
+            "disk_peak_bytes": 3755050051
+          },
+          {
+            "window_start_sec": 2880.0,
+            "window_end_sec": 2940.0,
+            "rss_sample_mean_mib": 237.00464527027026,
+            "rss_peak_mib": 237.0078125,
+            "disk_peak_bytes": 3855645679
+          },
+          {
+            "window_start_sec": 2940.0,
+            "window_end_sec": 3000.0,
+            "rss_sample_mean_mib": 237.0078125,
+            "rss_peak_mib": 237.0078125,
+            "disk_peak_bytes": 3964526142
+          },
+          {
+            "window_start_sec": 3000.0,
+            "window_end_sec": 3060.0,
+            "rss_sample_mean_mib": 243.95331768497758,
+            "rss_peak_mib": 320.15625,
+            "disk_peak_bytes": 4037535616
+          },
+          {
+            "window_start_sec": 3060.0,
+            "window_end_sec": 3120.0,
+            "rss_sample_mean_mib": 244.95336387140287,
+            "rss_peak_mib": 512.07421875,
+            "disk_peak_bytes": 4126553865
+          },
+          {
+            "window_start_sec": 3120.0,
+            "window_end_sec": 3180.0,
+            "rss_sample_mean_mib": 243.45567602040816,
+            "rss_peak_mib": 362.125,
+            "disk_peak_bytes": 4155222861
+          },
+          {
+            "window_start_sec": 3180.0,
+            "window_end_sec": 3240.0,
+            "rss_sample_mean_mib": 237.375,
+            "rss_peak_mib": 237.375,
+            "disk_peak_bytes": 4264675591
+          },
+          {
+            "window_start_sec": 3240.0,
+            "window_end_sec": 3300.0,
+            "rss_sample_mean_mib": 243.5926989910314,
+            "rss_peak_mib": 326.15625,
+            "disk_peak_bytes": 4356316083
+          },
+          {
+            "window_start_sec": 3300.0,
+            "window_end_sec": 3360.0,
+            "rss_sample_mean_mib": 239.4583222987288,
+            "rss_peak_mib": 496.78125,
+            "disk_peak_bytes": 4418037604
+          },
+          {
+            "window_start_sec": 3360.0,
+            "window_end_sec": 3420.0,
+            "rss_sample_mean_mib": 235.004823507085,
+            "rss_peak_mib": 305.89453125,
+            "disk_peak_bytes": 4518642647
+          },
+          {
+            "window_start_sec": 3420.0,
+            "window_end_sec": 3480.0,
+            "rss_sample_mean_mib": 233.16267602237653,
+            "rss_peak_mib": 305.89453125,
+            "disk_peak_bytes": 4603946525
+          },
+          {
+            "window_start_sec": 3480.0,
+            "window_end_sec": 3540.0,
+            "rss_sample_mean_mib": 262.81119011976045,
+            "rss_peak_mib": 316.0859375,
+            "disk_peak_bytes": 4657467541
+          },
+          {
+            "window_start_sec": 3540.0,
+            "window_end_sec": 3600.0,
+            "rss_sample_mean_mib": 232.9375,
+            "rss_peak_mib": 232.9375,
+            "disk_peak_bytes": 4753432303
+          },
+          {
+            "window_start_sec": 3600.0,
+            "window_end_sec": 3660.0,
+            "rss_sample_mean_mib": 241.0809287891986,
+            "rss_peak_mib": 316.63671875,
+            "disk_peak_bytes": 4831938196
+          },
+          {
+            "window_start_sec": 3660.0,
+            "window_end_sec": 3720.0,
+            "rss_sample_mean_mib": 242.75359059343435,
+            "rss_peak_mib": 316.87109375,
+            "disk_peak_bytes": 5212620842
+          },
+          {
+            "window_start_sec": 3720.0,
+            "window_end_sec": 3780.0,
+            "rss_sample_mean_mib": 241.90197960805085,
+            "rss_peak_mib": 243.609375,
+            "disk_peak_bytes": 5773932586
+          },
+          {
+            "window_start_sec": 3780.0,
+            "window_end_sec": 3840.0,
+            "rss_sample_mean_mib": 243.88300619834712,
+            "rss_peak_mib": 244.1328125,
+            "disk_peak_bytes": 7620761642
+          },
+          {
+            "window_start_sec": 3840.0,
+            "window_end_sec": 3900.0,
+            "rss_sample_mean_mib": 231.9685546875,
+            "rss_peak_mib": 243.87890625,
+            "disk_peak_bytes": 7620761642
+          },
+          {
+            "window_start_sec": 3900.0,
+            "window_end_sec": 3924.095,
+            "rss_sample_mean_mib": 221.83474170918367,
+            "rss_peak_mib": 224.39453125,
+            "disk_peak_bytes": 7620761642
+          }
+        ]
+      },
+      "TRIET": {
+        "window_sec": 60.0,
+        "rss_samples": 16831,
+        "disk_samples": 128,
+        "rows": [
+          {
+            "window_start_sec": 0.0,
+            "window_end_sec": 60.0,
+            "rss_sample_mean_mib": 169.8597257653061,
+            "rss_peak_mib": 178.9375,
+            "disk_peak_bytes": 30092623
+          },
+          {
+            "window_start_sec": 60.0,
+            "window_end_sec": 120.0,
+            "rss_sample_mean_mib": 186.40397439641745,
+            "rss_peak_mib": 317.19140625,
+            "disk_peak_bytes": 143321183
+          },
+          {
+            "window_start_sec": 120.0,
+            "window_end_sec": 180.0,
+            "rss_sample_mean_mib": 213.01665380658437,
+            "rss_peak_mib": 290.8515625,
+            "disk_peak_bytes": 192213149
+          },
+          {
+            "window_start_sec": 180.0,
+            "window_end_sec": 240.0,
+            "rss_sample_mean_mib": 206.03288453014184,
+            "rss_peak_mib": 289.74609375,
+            "disk_peak_bytes": 272216945
+          },
+          {
+            "window_start_sec": 240.0,
+            "window_end_sec": 300.0,
+            "rss_sample_mean_mib": 231.2555250563063,
+            "rss_peak_mib": 306.83984375,
+            "disk_peak_bytes": 344159851
+          },
+          {
+            "window_start_sec": 300.0,
+            "window_end_sec": 360.0,
+            "rss_sample_mean_mib": 232.51960227272727,
+            "rss_peak_mib": 355.29296875,
+            "disk_peak_bytes": 373014040
+          },
+          {
+            "window_start_sec": 360.0,
+            "window_end_sec": 420.0,
+            "rss_sample_mean_mib": 227.33025291828793,
+            "rss_peak_mib": 300.8046875,
+            "disk_peak_bytes": 471069179
+          },
+          {
+            "window_start_sec": 420.0,
+            "window_end_sec": 480.0,
+            "rss_sample_mean_mib": 229.10708769011407,
+            "rss_peak_mib": 300.82421875,
+            "disk_peak_bytes": 505287256
+          },
+          {
+            "window_start_sec": 480.0,
+            "window_end_sec": 540.0,
+            "rss_sample_mean_mib": 222.83519476232394,
+            "rss_peak_mib": 310.20703125,
+            "disk_peak_bytes": 609114194
+          },
+          {
+            "window_start_sec": 540.0,
+            "window_end_sec": 600.0,
+            "rss_sample_mean_mib": 236.27811373197116,
+            "rss_peak_mib": 306.78515625,
+            "disk_peak_bytes": 689461366
+          },
+          {
+            "window_start_sec": 600.0,
+            "window_end_sec": 660.0,
+            "rss_sample_mean_mib": 221.39274024209487,
+            "rss_peak_mib": 300.9140625,
+            "disk_peak_bytes": 728614872
+          },
+          {
+            "window_start_sec": 660.0,
+            "window_end_sec": 720.0,
+            "rss_sample_mean_mib": 217.7853562688253,
+            "rss_peak_mib": 217.7890625,
+            "disk_peak_bytes": 840561184
+          },
+          {
+            "window_start_sec": 720.0,
+            "window_end_sec": 780.0,
+            "rss_sample_mean_mib": 237.04376105542454,
+            "rss_peak_mib": 312.33203125,
+            "disk_peak_bytes": 918537137
+          },
+          {
+            "window_start_sec": 780.0,
+            "window_end_sec": 840.0,
+            "rss_sample_mean_mib": 241.5182350056054,
+            "rss_peak_mib": 313.79296875,
+            "disk_peak_bytes": 984321518
+          },
+          {
+            "window_start_sec": 840.0,
+            "window_end_sec": 900.0,
+            "rss_sample_mean_mib": 240.65139055023923,
+            "rss_peak_mib": 496.4609375,
+            "disk_peak_bytes": 1022894059
+          },
+          {
+            "window_start_sec": 900.0,
+            "window_end_sec": 960.0,
+            "rss_sample_mean_mib": 227.327772450361,
+            "rss_peak_mib": 311.98046875,
+            "disk_peak_bytes": 1102375186
+          },
+          {
+            "window_start_sec": 960.0,
+            "window_end_sec": 1020.0,
+            "rss_sample_mean_mib": 232.54083169843048,
+            "rss_peak_mib": 314.515625,
+            "disk_peak_bytes": 1184754313
+          },
+          {
+            "window_start_sec": 1020.0,
+            "window_end_sec": 1080.0,
+            "rss_sample_mean_mib": 245.358154296875,
+            "rss_peak_mib": 305.12109375,
+            "disk_peak_bytes": 1233737292
+          },
+          {
+            "window_start_sec": 1080.0,
+            "window_end_sec": 1140.0,
+            "rss_sample_mean_mib": 239.17578125,
+            "rss_peak_mib": 305.12109375,
+            "disk_peak_bytes": 1263680834
+          },
+          {
+            "window_start_sec": 1140.0,
+            "window_end_sec": 1200.0,
+            "rss_sample_mean_mib": 221.97341317041523,
+            "rss_peak_mib": 221.98046875,
+            "disk_peak_bytes": 1372469803
+          },
+          {
+            "window_start_sec": 1200.0,
+            "window_end_sec": 1260.0,
+            "rss_sample_mean_mib": 226.28492897727273,
+            "rss_peak_mib": 228.08984375,
+            "disk_peak_bytes": 1468052066
+          },
+          {
+            "window_start_sec": 1260.0,
+            "window_end_sec": 1320.0,
+            "rss_sample_mean_mib": 240.22862554112555,
+            "rss_peak_mib": 296.578125,
+            "disk_peak_bytes": 1540296946
+          },
+          {
+            "window_start_sec": 1320.0,
+            "window_end_sec": 1380.0,
+            "rss_sample_mean_mib": 230.8494356094306,
+            "rss_peak_mib": 502.67578125,
+            "disk_peak_bytes": 1632600789
+          },
+          {
+            "window_start_sec": 1380.0,
+            "window_end_sec": 1440.0,
+            "rss_sample_mean_mib": 228.1875,
+            "rss_peak_mib": 228.1875,
+            "disk_peak_bytes": 1735853103
+          },
+          {
+            "window_start_sec": 1440.0,
+            "window_end_sec": 1500.0,
+            "rss_sample_mean_mib": 282.2108412191901,
+            "rss_peak_mib": 364.03515625,
+            "disk_peak_bytes": 1763626315
+          },
+          {
+            "window_start_sec": 1500.0,
+            "window_end_sec": 1560.0,
+            "rss_sample_mean_mib": 280.27366162909834,
+            "rss_peak_mib": 546.95703125,
+            "disk_peak_bytes": 1853111435
+          },
+          {
+            "window_start_sec": 1560.0,
+            "window_end_sec": 1620.0,
+            "rss_sample_mean_mib": 276.62179631294964,
+            "rss_peak_mib": 363.96875,
+            "disk_peak_bytes": 1929490829
+          },
+          {
+            "window_start_sec": 1620.0,
+            "window_end_sec": 1680.0,
+            "rss_sample_mean_mib": 272.50362723214283,
+            "rss_peak_mib": 272.5078125,
+            "disk_peak_bytes": 2034721202
+          },
+          {
+            "window_start_sec": 1680.0,
+            "window_end_sec": 1740.0,
+            "rss_sample_mean_mib": 274.7212775735294,
+            "rss_peak_mib": 544.59765625,
+            "disk_peak_bytes": 2137931220
+          },
+          {
+            "window_start_sec": 1740.0,
+            "window_end_sec": 1800.0,
+            "rss_sample_mean_mib": 280.1219482421875,
+            "rss_peak_mib": 364.09765625,
+            "disk_peak_bytes": 2225219789
+          },
+          {
+            "window_start_sec": 1800.0,
+            "window_end_sec": 1860.0,
+            "rss_sample_mean_mib": 273.0596454326923,
+            "rss_peak_mib": 273.12890625,
+            "disk_peak_bytes": 2325753132
+          },
+          {
+            "window_start_sec": 1860.0,
+            "window_end_sec": 1920.0,
+            "rss_sample_mean_mib": 279.5650612408425,
+            "rss_peak_mib": 365.4140625,
+            "disk_peak_bytes": 2405077629
+          },
+          {
+            "window_start_sec": 1920.0,
+            "window_end_sec": 1980.0,
+            "rss_sample_mean_mib": 283.080826627994,
+            "rss_peak_mib": 365.58984375,
+            "disk_peak_bytes": 2482385577
+          },
+          {
+            "window_start_sec": 1980.0,
+            "window_end_sec": 2040.0,
+            "rss_sample_mean_mib": 282.2782561587591,
+            "rss_peak_mib": 361.66015625,
+            "disk_peak_bytes": 2550239273
+          },
+          {
+            "window_start_sec": 2040.0,
+            "window_end_sec": 2100.0,
+            "rss_sample_mean_mib": 274.31640625,
+            "rss_peak_mib": 274.31640625,
+            "disk_peak_bytes": 2654121242
+          },
+          {
+            "window_start_sec": 2100.0,
+            "window_end_sec": 2160.0,
+            "rss_sample_mean_mib": 274.32007230987057,
+            "rss_peak_mib": 274.3203125,
+            "disk_peak_bytes": 2765139627
+          },
+          {
+            "window_start_sec": 2160.0,
+            "window_end_sec": 2220.0,
+            "rss_sample_mean_mib": 285.4038816437008,
+            "rss_peak_mib": 366.05078125,
+            "disk_peak_bytes": 2850980947
+          },
+          {
+            "window_start_sec": 2220.0,
+            "window_end_sec": 2280.0,
+            "rss_sample_mean_mib": 283.4595972803347,
+            "rss_peak_mib": 357.921875,
+            "disk_peak_bytes": 2914349685
+          },
+          {
+            "window_start_sec": 2280.0,
+            "window_end_sec": 2340.0,
+            "rss_sample_mean_mib": 280.60420907980455,
+            "rss_peak_mib": 367.328125,
+            "disk_peak_bytes": 2962648372
+          },
+          {
+            "window_start_sec": 2340.0,
+            "window_end_sec": 2400.0,
+            "rss_sample_mean_mib": 282.02255042330677,
+            "rss_peak_mib": 364.3671875,
+            "disk_peak_bytes": 3054763977
+          },
+          {
+            "window_start_sec": 2400.0,
+            "window_end_sec": 2460.0,
+            "rss_sample_mean_mib": 281.78854271673384,
+            "rss_peak_mib": 340.2734375,
+            "disk_peak_bytes": 3162297334
+          },
+          {
+            "window_start_sec": 2460.0,
+            "window_end_sec": 2520.0,
+            "rss_sample_mean_mib": 229.51351731115108,
+            "rss_peak_mib": 317.8984375,
+            "disk_peak_bytes": 3200915397
+          },
+          {
+            "window_start_sec": 2520.0,
+            "window_end_sec": 2580.0,
+            "rss_sample_mean_mib": 232.8454547895189,
+            "rss_peak_mib": 314.14453125,
+            "disk_peak_bytes": 3292438692
+          },
+          {
+            "window_start_sec": 2580.0,
+            "window_end_sec": 2640.0,
+            "rss_sample_mean_mib": 234.55904447115384,
+            "rss_peak_mib": 311.28125,
+            "disk_peak_bytes": 3383240208
+          },
+          {
+            "window_start_sec": 2640.0,
+            "window_end_sec": 2700.0,
+            "rss_sample_mean_mib": 242.4288383152174,
+            "rss_peak_mib": 315.2109375,
+            "disk_peak_bytes": 3475420067
+          },
+          {
+            "window_start_sec": 2700.0,
+            "window_end_sec": 2760.0,
+            "rss_sample_mean_mib": 239.98208912037038,
+            "rss_peak_mib": 323.59375,
+            "disk_peak_bytes": 3539210515
+          },
+          {
+            "window_start_sec": 2760.0,
+            "window_end_sec": 2820.0,
+            "rss_sample_mean_mib": 234.77804863721803,
+            "rss_peak_mib": 321.12109375,
+            "disk_peak_bytes": 3641607958
+          },
+          {
+            "window_start_sec": 2820.0,
+            "window_end_sec": 2880.0,
+            "rss_sample_mean_mib": 232.0407325634058,
+            "rss_peak_mib": 232.1015625,
+            "disk_peak_bytes": 3748862786
+          },
+          {
+            "window_start_sec": 2880.0,
+            "window_end_sec": 2940.0,
+            "rss_sample_mean_mib": 245.0267137096774,
+            "rss_peak_mib": 497.9140625,
+            "disk_peak_bytes": 3763105472
+          },
+          {
+            "window_start_sec": 2940.0,
+            "window_end_sec": 3000.0,
+            "rss_sample_mean_mib": 231.90248325892858,
+            "rss_peak_mib": 318.8046875,
+            "disk_peak_bytes": 3876697146
+          },
+          {
+            "window_start_sec": 3000.0,
+            "window_end_sec": 3060.0,
+            "rss_sample_mean_mib": 236.26905817474048,
+            "rss_peak_mib": 324.7578125,
+            "disk_peak_bytes": 3980115927
+          },
+          {
+            "window_start_sec": 3060.0,
+            "window_end_sec": 3120.0,
+            "rss_sample_mean_mib": 216.35,
+            "rss_peak_mib": 284.6953125,
+            "disk_peak_bytes": 4053630551
+          },
+          {
+            "window_start_sec": 3120.0,
+            "window_end_sec": 3180.0,
+            "rss_sample_mean_mib": 210.790384992163,
+            "rss_peak_mib": 300.25390625,
+            "disk_peak_bytes": 4146815898
+          },
+          {
+            "window_start_sec": 3180.0,
+            "window_end_sec": 3240.0,
+            "rss_sample_mean_mib": 208.27817867366412,
+            "rss_peak_mib": 292.9375,
+            "disk_peak_bytes": 4214148561
+          },
+          {
+            "window_start_sec": 3240.0,
+            "window_end_sec": 3300.0,
+            "rss_sample_mean_mib": 209.34919226694916,
+            "rss_peak_mib": 285.26953125,
+            "disk_peak_bytes": 4313728524
+          },
+          {
+            "window_start_sec": 3300.0,
+            "window_end_sec": 3360.0,
+            "rss_sample_mean_mib": 226.77578125,
+            "rss_peak_mib": 337.08984375,
+            "disk_peak_bytes": 4361256442
+          },
+          {
+            "window_start_sec": 3360.0,
+            "window_end_sec": 3420.0,
+            "rss_sample_mean_mib": 206.4325284090909,
+            "rss_peak_mib": 206.609375,
+            "disk_peak_bytes": 4467581126
+          },
+          {
+            "window_start_sec": 3420.0,
+            "window_end_sec": 3480.0,
+            "rss_sample_mean_mib": 207.0418400318697,
+            "rss_peak_mib": 294.60546875,
+            "disk_peak_bytes": 4520677424
+          },
+          {
+            "window_start_sec": 3480.0,
+            "window_end_sec": 3540.0,
+            "rss_sample_mean_mib": 211.7223643238434,
+            "rss_peak_mib": 286.2578125,
+            "disk_peak_bytes": 4644841913
+          },
+          {
+            "window_start_sec": 3540.0,
+            "window_end_sec": 3600.0,
+            "rss_sample_mean_mib": 230.15642702039275,
+            "rss_peak_mib": 231.00390625,
+            "disk_peak_bytes": 4736909264
+          },
+          {
+            "window_start_sec": 3600.0,
+            "window_end_sec": 3660.0,
+            "rss_sample_mean_mib": 236.44764709472656,
+            "rss_peak_mib": 321.5546875,
+            "disk_peak_bytes": 4812910491
+          },
+          {
+            "window_start_sec": 3660.0,
+            "window_end_sec": 3720.0,
+            "rss_sample_mean_mib": 232.02626050420167,
+            "rss_peak_mib": 232.93359375,
+            "disk_peak_bytes": 5329013040
+          },
+          {
+            "window_start_sec": 3720.0,
+            "window_end_sec": 3780.0,
+            "rss_sample_mean_mib": 231.91061580882354,
+            "rss_peak_mib": 232.4921875,
+            "disk_peak_bytes": 6683998512
+          },
+          {
+            "window_start_sec": 3780.0,
+            "window_end_sec": 3840.0,
+            "rss_sample_mean_mib": 230.05358072916667,
+            "rss_peak_mib": 230.0546875,
+            "disk_peak_bytes": 7552624944
+          },
+          {
+            "window_start_sec": 3840.0,
+            "window_end_sec": 3899.487,
+            "rss_sample_mean_mib": 229.62325671487602,
+            "rss_peak_mib": 230.0546875,
+            "disk_peak_bytes": 7552624944
+          }
+        ]
       }
     }
   }

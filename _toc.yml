@@ -1,7 +1,7 @@
 format: jb-book
 root: index
 parts:
-  - caption: Milestone 1 — Thu thập dữ liệu
+  - caption: Milestone 1 - Thu thập dữ liệu
     chapters:
       - file: chapters/00_m1_overview
         sections:
@@ -10,7 +10,7 @@ parts:
           - file: chapters/03_reference_extraction
           - file: chapters/04_schema_and_data_quality
           - file: chapters/05_performance_benchmark
-  - caption: Milestone 2 — Phân tích cấu trúc và chuẩn hóa
+  - caption: Milestone 2 - Phân tích cấu trúc và chuẩn hóa
     chapters:
       - file: chapters/00_m2_overview
         sections:
