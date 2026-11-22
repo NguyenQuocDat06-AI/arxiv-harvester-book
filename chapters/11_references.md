@@ -10,5 +10,5 @@
 ## Mã nguồn nhóm arXiv Harvester
 
 - [Repository source chính (GitHub)](https://github.com/NguyenQuocDat06-AI/arxiv-harvester/tree/main)
-- [Phân công & đóng góp thành viên](https://github.com/NguyenQuocDat06-AI/arxiv-harvester/blob/main/CONTRIBUTIONS.md)
+- [Phân công & đóng góp thành viên](https://github.com/NguyenQuocDat06-AI/arxiv-harvester/blob/main/README.md#team--contributors)
 - [Script dựng Book 25.000 bài](https://github.com/NguyenQuocDat06-AI/arxiv-harvester/blob/main/tools/build_team_25000_book.py)
