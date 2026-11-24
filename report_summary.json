@@ -7,7 +7,7 @@
     "member_assigned": 5000,
     "members": 5,
     "archives_used": 1713,
-    "selection": "Toàn bộ dải 25.000 bài của 5 thành viên (DAT, TUAN, TAN, TRI, TRIET); thành viên TRI đã chạy bù --resume trên Google Colab CPU-only từ 4.425 lên đủ 5.000 bài trước khi bước sang M2."
+    "selection": "Toàn bộ dải 25.000 bài của 5 thành viên (DAT, TUAN, TAN, TRI, TRIET); phân vùng TRI đã chạy bù --resume trên Google Colab CPU-only từ 4.425 lên đủ 5.000 bài trước khi bước sang M2."
   },
   "m1": {
     "version_histogram": {
@@ -816,27 +816,27 @@
       }
     ],
     "coverage_tiers": {
-      "Mọi version empty (PDF-only / no LaTeX)": 2006,
-      "Parsed đủ (không lỗi, có partial)": 2946,
-      "Hoàn toàn sạch (mọi version success/empty)": 19168,
-      "Có ít nhất 1 version lỗi/thiếu nguồn": 880
+      "Mọi phiên bản đều không có TeX (PDF-only)": 2006,
+      "Dựng đủ cây (không lỗi, có bán phần)": 2946,
+      "Hoàn tất sạch (mọi phiên bản success/empty)": 19168,
+      "Có ít nhất 1 phiên bản lỗi hoặc thiếu nguồn": 880
     },
     "parsed_coverage_buckets": {
       "Không có TeX (chỉ empty)": 2006,
-      "100% version TeX parse được": 22027,
-      "0% (lỗi/thiếu hết)": 426,
-      "50% - <100%": 484,
-      ">0% - <50%": 57
+      "100% phiên bản TeX dựng được cây": 22027,
+      "0% (lỗi hoặc thiếu hết)": 426,
+      "50% đến dưới 100%": 484,
+      "Trên 0% đến dưới 50%": 57
     },
     "diagnostic_categories": {
-      "Citation key chưa resolve được sau hợp nhất": 2084,
-      "Bibliography thiếu / không đọc được / trùng khóa": 1536,
-      "Lệnh \\item / môi trường TeX tùy biến": 951,
-      "Include thiếu hoặc tên file có dấu chấm phụ": 805,
-      "Compilation root mơ hồ / không tìm thấy root": 613,
-      "Lỗi / diagnostic cấu trúc khác (Unclosed group, self-edge...)": 404,
-      "Include động / không hỗ trợ": 271,
-      "Thiếu nguồn M1 (169 HTTP 404 + 11 phiên bản chờ)": 180
+      "Khóa trích dẫn chưa ánh xạ được sau hợp nhất": 2084,
+      "Tệp tài liệu tham khảo thiếu, lỗi đọc hoặc trùng khóa": 1536,
+      "Lệnh item hoặc môi trường TeX tùy biến": 951,
+      "Tệp include thiếu hoặc tên tệp có dấu chấm phụ": 805,
+      "Tệp gốc biên dịch mơ hồ hoặc thiếu documentclass": 613,
+      "Cảnh báo cú pháp khác (ngoặc chưa đóng, cạnh tự nối)": 404,
+      "Lệnh include chứa macro động": 271,
+      "Thiếu nguồn M1 (169 HTTP 404 và 11 phiên bản chờ)": 180
     },
     "top_diagnostics": [
       {
@@ -846,31 +846,31 @@
         "primary_status": "partial"
       },
       {
-        "message": "missing include: <relative_path>",
+        "message": "missing include: (đường dẫn tương đối)",
         "distinct_versions": 805,
         "occurrences": 3477,
         "primary_status": "partial"
       },
       {
-        "message": "duplicate citation key in bibliography: <key>",
+        "message": "duplicate citation key in bibliography: (khóa trích dẫn)",
         "distinct_versions": 435,
         "occurrences": 1612,
         "primary_status": "partial"
       },
       {
-        "message": "missing/unsafe bibliography: <bib_file>",
+        "message": "missing/unsafe bibliography: (tệp .bib)",
         "distinct_versions": 637,
         "occurrences": 765,
         "primary_status": "partial"
       },
       {
-        "message": "unsupported/empty compiled bibliography: <bbl_file>; original retained",
+        "message": "unsupported/empty compiled bibliography: (tệp .bbl); original retained",
         "distinct_versions": 621,
         "occurrences": 621,
         "primary_status": "partial"
       },
       {
-        "message": "duplicate citation key in inline bibliography: <key>",
+        "message": "duplicate citation key in inline bibliography: (khóa trích dẫn)",
         "distinct_versions": 139,
         "occurrences": 619,
         "primary_status": "partial"
@@ -882,13 +882,13 @@
         "primary_status": "error"
       },
       {
-        "message": "dynamic/unsupported include in <tex_file>",
+        "message": "dynamic/unsupported include in (tệp .tex)",
         "distinct_versions": 271,
         "occurrences": 574,
         "primary_status": "partial"
       },
       {
-        "message": "unmatched end environment: <env>",
+        "message": "unmatched end environment: (môi trường)",
         "distinct_versions": 90,
         "occurrences": 331,
         "primary_status": "partial"
@@ -900,19 +900,19 @@
         "primary_status": "error"
       },
       {
-        "message": "unsafe bibliography: <bib_file>",
+        "message": "unsafe bibliography: (tệp .bib)",
         "distinct_versions": 113,
         "occurrences": 157,
         "primary_status": "partial"
       },
       {
-        "message": "unreadable compiled bibliography <bbl_file>: Unclosed TeX group",
+        "message": "unreadable compiled bibliography (tệp .bbl): Unclosed TeX group",
         "distinct_versions": 138,
         "occurrences": 138,
         "primary_status": "partial"
       },
       {
-        "message": "unclosed environments: <env_list>",
+        "message": "unclosed environments: (danh sách môi trường)",
         "distinct_versions": 46,
         "occurrences": 46,
         "primary_status": "partial"
@@ -924,7 +924,7 @@
         "primary_status": "error"
       },
       {
-        "message": "Unclosed environment <env>",
+        "message": "Unclosed environment (môi trường)",
         "distinct_versions": 39,
         "occurrences": 39,
         "primary_status": "error"
@@ -943,7 +943,7 @@
         "2 - 5 tệp": 3810,
         "1 tệp (.tex đơn)": 26918,
         "6 - 15 tệp": 5222,
-        "16+ tệp": 1578
+        "Từ 16 tệp trở lên": 1578
       },
       "max_comp_files": 115,
       "bib_file_refs": 23512,
@@ -1189,34 +1189,34 @@
     },
     "storage_reconciliation": [
       {
-        "tier": "1. Tổng 75.000 file Parquet thuần của 5 phiên M2 (elements + hierarchy + bibtex)",
+        "tier": "1. Tổng 75.000 tệp Parquet thuần của 5 phiên M2 (elements, hierarchy, bibtex)",
         "bytes": 4179768447,
         "gib": 3.8927,
-        "note": "Tổng final_output_bytes thuần của 5 thành viên (25.000 × 3 file Parquet)."
+        "note": "Tổng final_output_bytes thuần của 5 thành viên (25.000 bài nhân 3 tệp Parquet)."
       },
       {
         "tier": "2. Thư mục parsed/ hợp nhất toàn nhóm trên Colab (totals.final_output_bytes)",
         "bytes": 4215352479,
         "gib": 3.9259,
-        "note": "Cộng thêm đúng +35.584.032 byte của 3 file quản trị (manifest.json + stats.json + project_validation.json)."
+        "note": "Cộng thêm 35.584.032 byte của 3 tệp quản trị (manifest.json, stats.json, project_validation.json)."
       },
       {
-        "tier": "3. Ba bảng M2 sau khi gộp thành 35 shards chuẩn Hugging Face (16 + 16 + 3)",
+        "tier": "3. Ba bảng M2 sau khi gộp thành 35 phân mảnh chuẩn Hugging Face (16 + 16 + 3)",
         "bytes": 4121753443,
         "gib": 3.8387,
-        "note": "Loại bỏ 74.965 Parquet footer nhỏ lẻ & tăng hiệu quả nén Snappy + Dictionary Encoding (-55,33 MiB)."
+        "note": "Loại bỏ 74.965 Parquet footer nhỏ lẻ và tăng hiệu quả nén Snappy (giảm 55,33 MiB)."
       },
       {
-        "tier": "4. Trọn bộ 6 bảng Parquet xuất bản trên Hugging Face (38 shards)",
+        "tier": "4. Trọn bộ 6 bảng Parquet xuất bản trên Hugging Face (38 phân mảnh)",
         "bytes": 4207534396,
         "gib": 3.9186,
-        "note": "Gồm cả papers (3,52 MiB) + references (74,23 MiB) + 3 bảng M2 (3,84 GiB) + predictions (4,06 MiB)."
+        "note": "Gồm papers (3,52 MiB), references (74,23 MiB), 3 bảng M2 (3,84 GiB) và predictions (4,06 MiB)."
       },
       {
-        "tier": "5. Đỉnh đĩa workspace tạm thời lúc chạy M2 trên Colab CPU (phiên TUAN)",
+        "tier": "5. Đỉnh đĩa không gian làm việc tạm thời lúc chạy M2 trên Colab CPU (phiên TUAN)",
         "bytes": 8415823340,
         "gib": 7.8378,
-        "note": "Gồm Parquet + working/*.json + chỉ mục tạm SQLite out-of-core (.validation-*.sqlite ~2,80 GiB, tự xóa sau kiểm chuẩn)."
+        "note": "Gồm Parquet, working/*.json và chỉ mục tạm SQLite ngoài bộ nhớ (~2,80 GiB, tự xóa sau kiểm chuẩn)."
       }
     ],
     "phases_aggregated": {

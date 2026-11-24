@@ -1,6 +1,6 @@
-title: "arXiv Harvester — Báo cáo Kỹ thuật M1 & M2"
+title: "arXiv Harvester - Báo cáo kỹ thuật M1 & M2"
 author: "Nhóm arXiv Harvester (ĐHKHTN, ĐHQG-HCM)"
-copyright: "2026 — Nhóm arXiv Harvester • Nhập môn Khoa học Dữ liệu (Chương trình Chuẩn)"
+copyright: "2026 - Nhóm arXiv Harvester, Nhập môn Khoa học Dữ liệu"
 
 only_build_toc_files: true
 exclude_patterns:
@@ -22,9 +22,9 @@ html:
   baseurl: https://nguyenquocdat06-ai.github.io/arxiv-harvester-book/
   extra_footer: |
     <div class="ah-footer-note">
-      Quy mô kiểm chứng: <strong>25.000 bài báo / 41.498 phiên bản</strong> • Thực thi &amp; đo chuẩn trên <strong>Google Colab CPU-only</strong> •
-      Mã nguồn: <a href="https://github.com/NguyenQuocDat06-AI/arxiv-harvester" target="_blank" rel="noopener">arxiv-harvester</a> •
-      Dữ liệu 6 bảng: <a href="https://huggingface.co/datasets/nquocdat06/arxiv-harvester-data" target="_blank" rel="noopener">Hugging Face (3,92 GiB)</a>
+      Quy mô: 25.000 bài báo (41.498 phiên bản) trên Google Colab CPU-only |
+      Mã nguồn: <a href="https://github.com/NguyenQuocDat06-AI/arxiv-harvester" target="_blank" rel="noopener">arxiv-harvester</a> |
+      Dữ liệu: <a href="https://huggingface.co/datasets/nquocdat06/arxiv-harvester-data" target="_blank" rel="noopener">Hugging Face (3,92 GiB)</a>
     </div>
 
 parse:
@@ -55,21 +55,13 @@ sphinx:
       show_navbar_depth: 2
       collapse_navbar: false
       toc_title: "Mục lục trang"
-      search_bar_text: "Tìm kiếm chương, bảng số liệu..."
+      search_bar_text: "Tìm kiếm nội dung..."
       icon_links:
-        - name: "Mã nguồn Pipeline (GitHub)"
+        - name: "Mã nguồn hệ thống (GitHub)"
           url: "https://github.com/NguyenQuocDat06-AI/arxiv-harvester"
           icon: "fa-brands fa-github"
           type: "fontawesome"
-        - name: "Kho nguồn Jupyter Book"
-          url: "https://github.com/NguyenQuocDat06-AI/arxiv-harvester-book"
-          icon: "fa-solid fa-book-open"
-          type: "fontawesome"
-        - name: "Bộ dữ liệu Hugging Face (6 bảng)"
+        - name: "Bộ dữ liệu Hugging Face"
           url: "https://huggingface.co/datasets/nquocdat06/arxiv-harvester-data"
           icon: "fa-solid fa-database"
-          type: "fontawesome"
-        - name: "Đặc tả Đồ án HCMUS"
-          url: "https://hcmus-cs-ta.github.io/lab-book/intro-ds/statement/"
-          icon: "fa-solid fa-graduation-cap"
           type: "fontawesome"
