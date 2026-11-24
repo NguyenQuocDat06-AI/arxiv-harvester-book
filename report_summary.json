@@ -1,5 +1,5 @@
 {
-  "report_date": "2026-11-22",
+  "report_date": "2026-11-24",
   "scope": {
     "papers": 25000,
     "versions": 41498,
@@ -7,7 +7,7 @@
     "member_assigned": 5000,
     "members": 5,
     "archives_used": 1713,
-    "selection": "Toàn bộ dải 25.000 bài của 5 thành viên (DAT, TUAN, TAN, TRI, TRIET); TRI đã được --resume trên Google Colab CPU từ 4.425 lên 5.000 bài trước khi chạy M2."
+    "selection": "Toàn bộ dải 25.000 bài của 5 thành viên (DAT, TUAN, TAN, TRI, TRIET); thành viên TRI đã chạy bù --resume trên Google Colab CPU-only từ 4.425 lên đủ 5.000 bài trước khi bước sang M2."
   },
   "m1": {
     "version_histogram": {
@@ -231,6 +231,121 @@
         }
       ]
     },
+    "source_status_breakdown": {
+      "pdf_only": 2001,
+      "success": 22748,
+      "partial_success": 226,
+      "no_latex": 5,
+      "error": 2,
+      "not_found": 18
+    },
+    "per_member": [
+      {
+        "member": "DAT",
+        "full_name": "Nguyễn Quốc Đạt",
+        "student_id": "24120282",
+        "id_range": "2412.18848 - 2501.02641",
+        "publications": 5000,
+        "versions": 8149,
+        "verified_versions": 8149,
+        "tex_verified": 7479,
+        "empty_verified": 621,
+        "not_found_verified": 49,
+        "pending_versions": 0,
+        "working_references": 160041,
+        "course_references": 76257,
+        "source_before_bytes": 38761825023,
+        "source_after_bytes": 2181775035,
+        "source_reduction_rate": 0.943713,
+        "shard_disk_bytes": 2374965204,
+        "sampled_peak_disk_bytes": null,
+        "backup_archives": 361
+      },
+      {
+        "member": "TUAN",
+        "full_name": "Nguyễn Đình Tuấn",
+        "student_id": "24120237",
+        "id_range": "2502.03235 - 2502.08234",
+        "publications": 5000,
+        "versions": 8550,
+        "verified_versions": 8550,
+        "tex_verified": 7992,
+        "empty_verified": 505,
+        "not_found_verified": 53,
+        "pending_versions": 0,
+        "working_references": 182332,
+        "course_references": 88997,
+        "source_before_bytes": 46953746619,
+        "source_after_bytes": 2934567900,
+        "source_reduction_rate": 0.937501,
+        "shard_disk_bytes": 3190571565,
+        "sampled_peak_disk_bytes": null,
+        "backup_archives": 346
+      },
+      {
+        "member": "TAN",
+        "full_name": "Trần Nguyên Tân",
+        "student_id": "24120438",
+        "id_range": "2407.12839 - 2407.17838",
+        "publications": 5000,
+        "versions": 8093,
+        "verified_versions": 8093,
+        "tex_verified": 7488,
+        "empty_verified": 588,
+        "not_found_verified": 17,
+        "pending_versions": 0,
+        "working_references": 216326,
+        "course_references": 101168,
+        "source_before_bytes": 46092197938,
+        "source_after_bytes": 4285659781,
+        "source_reduction_rate": 0.90702,
+        "shard_disk_bytes": 4464275395,
+        "sampled_peak_disk_bytes": null,
+        "backup_archives": 303
+      },
+      {
+        "member": "TRI",
+        "full_name": "Dương Phan Minh Trí",
+        "student_id": "24120470",
+        "id_range": "2406.17938 - 2407.02838",
+        "publications": 5000,
+        "versions": 8338,
+        "verified_versions": 8338,
+        "tex_verified": 7818,
+        "empty_verified": 493,
+        "not_found_verified": 27,
+        "pending_versions": 0,
+        "working_references": 212007,
+        "course_references": 99057,
+        "source_before_bytes": 50002078696,
+        "source_after_bytes": 7161493781,
+        "source_reduction_rate": 0.856776,
+        "shard_disk_bytes": 7350344698,
+        "sampled_peak_disk_bytes": 7358749277,
+        "backup_archives": 287
+      },
+      {
+        "member": "TRIET",
+        "full_name": "Trịnh Vỹ Triết",
+        "student_id": "24120474",
+        "id_range": "2406.12938 - 2406.17937",
+        "publications": 5000,
+        "versions": 8368,
+        "verified_versions": 8357,
+        "tex_verified": 7777,
+        "empty_verified": 557,
+        "not_found_verified": 23,
+        "pending_versions": 11,
+        "working_references": 205645,
+        "course_references": 90670,
+        "source_before_bytes": 46573839263,
+        "source_after_bytes": 7833642921,
+        "source_reduction_rate": 0.831802,
+        "shard_disk_bytes": 8113340534,
+        "sampled_peak_disk_bytes": null,
+        "backup_archives": 416
+      }
+    ],
     "avg_versions_per_paper": 1.66,
     "paper_crawl_success_rate": 0.9099,
     "source_version_coverage_rate": 0.9291,
@@ -239,6 +354,7 @@
     "duplicate_publications_removed": 0,
     "duplicate_references_removed": 0,
     "orphan_references_count": 0,
+    "reference_identity_conflicts_count": 3,
     "phases_aggregated": {
       "drive_backup": {
         "elapsed_sec": 5328.157,
@@ -341,8 +457,160 @@
         "colab_cpu": true
       }
     ],
+    "colab_sessions_full": [
+      {
+        "session_label": "M1-DAT",
+        "member": "DAT",
+        "assigned_papers": 5000,
+        "completed_in_checkpoint": 5000,
+        "processed_this_run": 5000,
+        "stop_status": "paused_time_budget",
+        "stop_reason": "cooldown_exceeds_s2_budget",
+        "runtime_sec": 38731.255,
+        "avg_sec_per_processed": 7.7463,
+        "peak_rss_mib": 1129.52,
+        "os_reported_peak_rss_mib": 1130.89,
+        "avg_rss_mib": 572.63,
+        "rss_samples": 114437,
+        "end_disk_bytes": 2374965204,
+        "sampled_peak_disk_bytes": null,
+        "colab_cpu": true
+      },
+      {
+        "session_label": "M1-TUAN",
+        "member": "TUAN",
+        "assigned_papers": 5000,
+        "completed_in_checkpoint": 5000,
+        "processed_this_run": 5000,
+        "stop_status": "paused_time_budget",
+        "stop_reason": "cooldown_exceeds_run_budget",
+        "runtime_sec": 41362.868,
+        "avg_sec_per_processed": 8.2726,
+        "peak_rss_mib": 1115.61,
+        "os_reported_peak_rss_mib": 1117.79,
+        "avg_rss_mib": 667.32,
+        "rss_samples": 123489,
+        "end_disk_bytes": 3190571565,
+        "sampled_peak_disk_bytes": null,
+        "colab_cpu": true
+      },
+      {
+        "session_label": "M1-TAN",
+        "member": "TAN",
+        "assigned_papers": 5000,
+        "completed_in_checkpoint": 5000,
+        "processed_this_run": 5000,
+        "stop_status": "paused_time_budget",
+        "stop_reason": "cooldown_exceeds_s2_budget",
+        "runtime_sec": 40399.386,
+        "avg_sec_per_processed": 8.0799,
+        "peak_rss_mib": 1227.73,
+        "os_reported_peak_rss_mib": 1227.59,
+        "avg_rss_mib": 642.27,
+        "rss_samples": 114629,
+        "end_disk_bytes": 4464275395,
+        "sampled_peak_disk_bytes": null,
+        "colab_cpu": true
+      },
+      {
+        "session_label": "M1-TRI-initial",
+        "member": "TRI",
+        "assigned_papers": 5000,
+        "completed_in_checkpoint": 4425,
+        "processed_this_run": 4425,
+        "stop_status": "paused_time_budget",
+        "stop_reason": "run_budget_exhausted",
+        "runtime_sec": 41424.222,
+        "avg_sec_per_processed": 9.3614,
+        "peak_rss_mib": null,
+        "os_reported_peak_rss_mib": null,
+        "avg_rss_mib": null,
+        "rss_samples": null,
+        "end_disk_bytes": null,
+        "sampled_peak_disk_bytes": null,
+        "colab_cpu": true
+      },
+      {
+        "session_label": "M1-TRI-resume",
+        "member": "TRI",
+        "assigned_papers": 5000,
+        "completed_in_checkpoint": 5000,
+        "processed_this_run": 644,
+        "stop_status": "paused_time_budget",
+        "stop_reason": "s2_drain_budget_exhausted",
+        "runtime_sec": 6058.999,
+        "avg_sec_per_processed": 9.4084,
+        "peak_rss_mib": 981.87,
+        "os_reported_peak_rss_mib": 1012.05,
+        "avg_rss_mib": 625.73,
+        "rss_samples": 16111,
+        "end_disk_bytes": 7350344698,
+        "sampled_peak_disk_bytes": 7358749277,
+        "colab_cpu": true
+      },
+      {
+        "session_label": "M1-TRIET",
+        "member": "TRIET",
+        "assigned_papers": 5000,
+        "completed_in_checkpoint": 5000,
+        "processed_this_run": 5000,
+        "stop_status": "paused_time_budget",
+        "stop_reason": "cooldown_exceeds_run_budget",
+        "runtime_sec": 40776.403,
+        "avg_sec_per_processed": 8.1553,
+        "peak_rss_mib": 1208.22,
+        "os_reported_peak_rss_mib": 1210.75,
+        "avg_rss_mib": 853.3,
+        "rss_samples": 122819,
+        "end_disk_bytes": 8113340534,
+        "sampled_peak_disk_bytes": null,
+        "colab_cpu": true
+      }
+    ],
     "max_member_peak_rss_mb": 1227.73,
-    "weighted_avg_rss_mb": 686.54
+    "weighted_avg_rss_mb": 686.54,
+    "performance_summary": {
+      "environment": {
+        "platform": "Linux x86_64 (Google Colab CPU Standard)",
+        "python_version": "3.13.18",
+        "is_google_colab": true,
+        "cpu_only": true,
+        "cpu_count_logical": 2,
+        "total_memory_mib": 12975.52,
+        "rss_unit": "MiB (bytes / 1024^2)"
+      },
+      "single_paper_cold_1ver_sec": 11.8097,
+      "single_paper_amortized_1ver_sec": 4.3373,
+      "full_4shards_papers": 20000,
+      "full_4shards_wall_sec": 161269.912,
+      "full_4shards_avg_sec_per_paper": 8.0635,
+      "full_4shards_phase_sum_sec": 179891.382,
+      "full_4shards_avg_phase_sec_per_paper": 8.9946,
+      "pipeline_overlap_factor": 1.1155,
+      "all_5members_unique_papers": 25000,
+      "all_5members_total_sessions": 6,
+      "all_5members_wall_sec": 208753.133,
+      "all_5members_avg_sec_per_paper": 8.3501,
+      "all_5members_avg_sec_per_version": 5.0304,
+      "discovery_4shards_sec": 2094.922,
+      "discovery_4shards_calls": 413,
+      "discovery_tri_resume_sec": 46.043,
+      "discovery_tri_resume_calls": 13,
+      "id_boundary_tri_resume_sec": 70.934,
+      "discovery_measured_total_sec": 2140.965,
+      "peak_rss_mib": 1227.73,
+      "os_reported_peak_rss_mib": 1227.59,
+      "weighted_avg_rss_mib": 686.54,
+      "rss_total_samples_4shards": 475374,
+      "rss_samples_tri_resume": 16111,
+      "max_member_end_disk_bytes": 8113340534,
+      "tri_resume_sampled_peak_disk_bytes": 7358749277,
+      "final_clean_corpus_bytes": 24397139418,
+      "final_merged_working_parquet_bytes": 190301760,
+      "final_course_papers_parquet_bytes": 3693385,
+      "final_course_references_parquet_bytes": 77834104,
+      "final_course_export_total_bytes": 81527489
+    }
   },
   "m2": {
     "status": "completed_with_errors",
@@ -568,70 +836,195 @@
       "Compilation root mơ hồ / không tìm thấy root": 613,
       "Lỗi / diagnostic cấu trúc khác (Unclosed group, self-edge...)": 404,
       "Include động / không hỗ trợ": 271,
-      "Thiếu nguồn M1 (HTTP 404 hoặc 11 ver pending)": 180
+      "Thiếu nguồn M1 (169 HTTP 404 + 11 phiên bản chờ)": 180
     },
     "top_diagnostics": [
       {
         "message": "item outside supported list",
-        "versions": 9087
+        "distinct_versions": 791,
+        "occurrences": 9087,
+        "primary_status": "partial"
+      },
+      {
+        "message": "missing include: <relative_path>",
+        "distinct_versions": 805,
+        "occurrences": 3477,
+        "primary_status": "partial"
+      },
+      {
+        "message": "duplicate citation key in bibliography: <key>",
+        "distinct_versions": 435,
+        "occurrences": 1612,
+        "primary_status": "partial"
+      },
+      {
+        "message": "missing/unsafe bibliography: <bib_file>",
+        "distinct_versions": 637,
+        "occurrences": 765,
+        "primary_status": "partial"
+      },
+      {
+        "message": "unsupported/empty compiled bibliography: <bbl_file>; original retained",
+        "distinct_versions": 621,
+        "occurrences": 621,
+        "primary_status": "partial"
+      },
+      {
+        "message": "duplicate citation key in inline bibliography: <key>",
+        "distinct_versions": 139,
+        "occurrences": 619,
+        "primary_status": "partial"
+      },
+      {
+        "message": "Expected one compilation root (0 or >1 candidates)",
+        "distinct_versions": 614,
+        "occurrences": 614,
+        "primary_status": "error"
+      },
+      {
+        "message": "dynamic/unsupported include in <tex_file>",
+        "distinct_versions": 271,
+        "occurrences": 574,
+        "primary_status": "partial"
+      },
+      {
+        "message": "unmatched end environment: <env>",
+        "distinct_versions": 90,
+        "occurrences": 331,
+        "primary_status": "partial"
       },
       {
         "message": "Unclosed TeX group",
-        "versions": 285
+        "distinct_versions": 285,
+        "occurrences": 285,
+        "primary_status": "error"
       },
       {
-        "message": "unsupported/empty compiled bibliography: main.bbl; original retained",
-        "versions": 209
+        "message": "unsafe bibliography: <bib_file>",
+        "distinct_versions": 113,
+        "occurrences": 157,
+        "primary_status": "partial"
       },
       {
-        "message": "dynamic/unsupported include in main.tex",
-        "versions": 164
+        "message": "unreadable compiled bibliography <bbl_file>: Unclosed TeX group",
+        "distinct_versions": 138,
+        "occurrences": 138,
+        "primary_status": "partial"
       },
       {
-        "message": "unmatched end environment: multline",
-        "versions": 90
-      },
-      {
-        "message": "duplicate citation key in inline bibliography: Robertson20192",
-        "versions": 76
-      },
-      {
-        "message": "missing/unsafe bibliography: references.bib",
-        "versions": 57
-      },
-      {
-        "message": "unreadable compiled bibliography main.bbl: Unclosed TeX group",
-        "versions": 57
-      },
-      {
-        "message": "missing include: sample.tikzstyles",
-        "versions": 54
-      },
-      {
-        "message": "dynamic/unsupported include in hcbc.tex",
-        "versions": 52
-      },
-      {
-        "message": "duplicate citation key in inline bibliography: AM",
-        "versions": 41
+        "message": "unclosed environments: <env_list>",
+        "distinct_versions": 46,
+        "occurrences": 46,
+        "primary_status": "partial"
       },
       {
         "message": "Publication pipeline failed: Deduplication would create a self-edge; inspect structural content",
-        "versions": 40
+        "distinct_versions": 40,
+        "occurrences": 40,
+        "primary_status": "error"
       },
       {
-        "message": "duplicate citation key in inline bibliography: kn:gnus",
-        "versions": 38
-      },
-      {
-        "message": "dynamic/unsupported include in paper.tex",
-        "versions": 36
-      },
-      {
-        "message": "duplicate citation key in inline bibliography: ConcreteMath",
-        "versions": 36
+        "message": "Unclosed environment <env>",
+        "distinct_versions": 39,
+        "occurrences": 39,
+        "primary_status": "error"
       }
     ],
+    "gathering_stats": {
+      "root_selection": {
+        "unique_candidate": 35815,
+        "title_match": 1369,
+        "error_before_root": 1026,
+        "title_similarity_unique": 222,
+        "title_match_top_level": 115,
+        "configured": 7
+      },
+      "file_bins": {
+        "2 - 5 tệp": 3810,
+        "1 tệp (.tex đơn)": 26918,
+        "6 - 15 tệp": 5222,
+        "16+ tệp": 1578
+      },
+      "max_comp_files": 115,
+      "bib_file_refs": 23512,
+      "bbl_file_refs": 9355,
+      "inline_only_tex_versions": 8695
+    },
+    "tex_elapsed_percentiles": {
+      "p50": 0.1663,
+      "p90": 0.4269,
+      "p95": 0.5841,
+      "p99": 1.6718,
+      "max": 20.6632,
+      "mean": 0.28
+    },
+    "dedup_by_revision_group": {
+      "single_version": {
+        "publications": 14067,
+        "elements_before": 6444466,
+        "elements_after": 6169855,
+        "elements_reduction_rate": 0.042612,
+        "bibtex_before": 534358,
+        "bibtex_after": 532429,
+        "bibtex_reduction_rate": 0.00361
+      },
+      "multi_version": {
+        "publications": 10933,
+        "elements_before": 16655123,
+        "elements_after": 8836145,
+        "elements_reduction_rate": 0.469464,
+        "bibtex_before": 1300292,
+        "bibtex_after": 644864,
+        "bibtex_reduction_rate": 0.504062
+      }
+    },
+    "element_kind_counts": {
+      "sentence": 8773601,
+      "paragraph": 3655526,
+      "block_formula": 1001469,
+      "environment": 406830,
+      "item": 311317,
+      "figure": 274313,
+      "subsection": 216914,
+      "section": 183374,
+      "list": 97782,
+      "subsubsection": 57706,
+      "document": 25800,
+      "chapter": 785,
+      "subparagraph": 583
+    },
+    "bibtex_profile": {
+      "total_rows": 1177293,
+      "entry_types_top": {
+        "misc": 519095,
+        "article": 463133,
+        "inproceedings": 161289,
+        "book": 19954,
+        "incollection": 4356,
+        "techreport": 2045,
+        "online": 1598,
+        "phdthesis": 1406,
+        "inbook": 1276,
+        "software": 805
+      },
+      "entry_types_other": 2336,
+      "field_nonnull_counts": {
+        "title": 1027503,
+        "year": 1154789,
+        "doi": 359744,
+        "journal": 464983,
+        "url": 139080,
+        "authors": 1025206
+      },
+      "field_nonnull_rates": {
+        "title": 0.872767,
+        "year": 0.980885,
+        "doi": 0.305569,
+        "journal": 0.394959,
+        "url": 0.118135,
+        "authors": 0.870816
+      }
+    },
     "pilot_v1_vs_v2": {
       "papers": 250,
       "versions": 536,
@@ -686,7 +1079,7 @@
       "is_google_colab": true,
       "cpu_only": true,
       "cpu_count_logical": 2,
-      "total_memory_mb": 12975.52,
+      "total_memory_mib": 12975.52,
       "code_hash": "cf2de7a143c80d55d4744293ccd8828290490a00a9ca8df5bc8a3d62973d5c58"
     },
     "sessions": [
@@ -702,6 +1095,7 @@
         "profiler_sec": 3350.243,
         "avg_sec_per_pub": 0.6700486,
         "peak_rss_mib": 845.34,
+        "os_reported_peak_rss_mib": 848.55,
         "avg_rss_mib": 237.55,
         "peak_disk_bytes": 7912809313,
         "final_disk_bytes": 5047234266,
@@ -719,6 +1113,7 @@
         "profiler_sec": 3777.627,
         "avg_sec_per_pub": 0.7555254,
         "peak_rss_mib": 789.36,
+        "os_reported_peak_rss_mib": 789.39,
         "avg_rss_mib": 225.74,
         "peak_disk_bytes": 8415823340,
         "final_disk_bytes": 5411615716,
@@ -736,6 +1131,7 @@
         "profiler_sec": 3740.636,
         "avg_sec_per_pub": 0.7481272,
         "peak_rss_mib": 498.27,
+        "os_reported_peak_rss_mib": 783.9,
         "avg_rss_mib": 243.59,
         "peak_disk_bytes": 7544122109,
         "final_disk_bytes": 4841871809,
@@ -753,6 +1149,7 @@
         "profiler_sec": 3924.095,
         "avg_sec_per_pub": 0.7848189999999999,
         "peak_rss_mib": 512.07,
+        "os_reported_peak_rss_mib": 762.32,
         "avg_rss_mib": 241.44,
         "peak_disk_bytes": 7620761642,
         "final_disk_bytes": 4875559960,
@@ -770,6 +1167,7 @@
         "profiler_sec": 3899.487,
         "avg_sec_per_pub": 0.7798974,
         "peak_rss_mib": 546.96,
+        "os_reported_peak_rss_mib": 757.16,
         "avg_rss_mib": 251.04,
         "peak_disk_bytes": 7552624944,
         "final_disk_bytes": 4838982904,
@@ -789,6 +1187,38 @@
       "max_session_peak_disk_bytes": 8415823340,
       "final_output_bytes": 4215352479
     },
+    "storage_reconciliation": [
+      {
+        "tier": "1. Tổng 75.000 file Parquet thuần của 5 phiên M2 (elements + hierarchy + bibtex)",
+        "bytes": 4179768447,
+        "gib": 3.8927,
+        "note": "Tổng final_output_bytes thuần của 5 thành viên (25.000 × 3 file Parquet)."
+      },
+      {
+        "tier": "2. Thư mục parsed/ hợp nhất toàn nhóm trên Colab (totals.final_output_bytes)",
+        "bytes": 4215352479,
+        "gib": 3.9259,
+        "note": "Cộng thêm đúng +35.584.032 byte của 3 file quản trị (manifest.json + stats.json + project_validation.json)."
+      },
+      {
+        "tier": "3. Ba bảng M2 sau khi gộp thành 35 shards chuẩn Hugging Face (16 + 16 + 3)",
+        "bytes": 4121753443,
+        "gib": 3.8387,
+        "note": "Loại bỏ 74.965 Parquet footer nhỏ lẻ & tăng hiệu quả nén Snappy + Dictionary Encoding (-55,33 MiB)."
+      },
+      {
+        "tier": "4. Trọn bộ 6 bảng Parquet xuất bản trên Hugging Face (38 shards)",
+        "bytes": 4207534396,
+        "gib": 3.9186,
+        "note": "Gồm cả papers (3,52 MiB) + references (74,23 MiB) + 3 bảng M2 (3,84 GiB) + predictions (4,06 MiB)."
+      },
+      {
+        "tier": "5. Đỉnh đĩa workspace tạm thời lúc chạy M2 trên Colab CPU (phiên TUAN)",
+        "bytes": 8415823340,
+        "gib": 7.8378,
+        "note": "Gồm Parquet + working/*.json + chỉ mục tạm SQLite out-of-core (.validation-*.sqlite ~2,80 GiB, tự xóa sau kiểm chuẩn)."
+      }
+    ],
     "phases_aggregated": {
       "parse_publication": {
         "elapsed_sec": 16065.461,

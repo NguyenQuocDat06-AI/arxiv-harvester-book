@@ -1,19 +1,75 @@
-title: arXiv Harvester - Milestone 1 và 2 (25.000 bài)
-author: Nhóm arXiv Harvester
+title: "arXiv Harvester — Báo cáo Kỹ thuật M1 & M2"
+author: "Nhóm arXiv Harvester (ĐHKHTN, ĐHQG-HCM)"
+copyright: "2026 — Nhóm arXiv Harvester • Nhập môn Khoa học Dữ liệu (Chương trình Chuẩn)"
+
+only_build_toc_files: true
+exclude_patterns:
+  - _build
+  - README.md
+  - "**.ipynb_checkpoints"
+  - .jupyter_cache
+
 repository:
   url: https://github.com/NguyenQuocDat06-AI/arxiv-harvester-book
   branch: main
+
 html:
+  home_page_in_navbar: true
   use_repository_button: true
-  use_edit_page_button: true
-  extra_css: [report.css]
+  use_issues_button: true
+  use_edit_page_button: false
+  use_multitoc_numbering: false
+  baseurl: https://nguyenquocdat06-ai.github.io/arxiv-harvester-book/
+  extra_footer: |
+    <div class="ah-footer-note">
+      Quy mô kiểm chứng: <strong>25.000 bài báo / 41.498 phiên bản</strong> • Thực thi &amp; đo chuẩn trên <strong>Google Colab CPU-only</strong> •
+      Mã nguồn: <a href="https://github.com/NguyenQuocDat06-AI/arxiv-harvester" target="_blank" rel="noopener">arxiv-harvester</a> •
+      Dữ liệu 6 bảng: <a href="https://huggingface.co/datasets/nquocdat06/arxiv-harvester-data" target="_blank" rel="noopener">Hugging Face (3,92 GiB)</a>
+    </div>
+
+parse:
+  myst_enable_extensions:
+    - colon_fence
+    - dollarmath
+    - amsmath
+    - deflist
+    - attrs_inline
+    - attrs_block
+    - substitution
+    - tasklist
+
 execute:
   execute_notebooks: force
   allow_errors: false
   timeout: 600
+
 sphinx:
+  recursive_update: true
   config:
     language: vi
-    exclude_patterns: [_build, README.md, '**.ipynb_checkpoints']
     nb_execution_raise_on_error: true
-    html_static_path: [_static]
+    html_theme_options:
+      use_source_button: true
+      use_download_button: true
+      use_fullscreen_button: true
+      show_navbar_depth: 2
+      collapse_navbar: false
+      toc_title: "Mục lục trang"
+      search_bar_text: "Tìm kiếm chương, bảng số liệu..."
+      icon_links:
+        - name: "Mã nguồn Pipeline (GitHub)"
+          url: "https://github.com/NguyenQuocDat06-AI/arxiv-harvester"
+          icon: "fa-brands fa-github"
+          type: "fontawesome"
+        - name: "Kho nguồn Jupyter Book"
+          url: "https://github.com/NguyenQuocDat06-AI/arxiv-harvester-book"
+          icon: "fa-solid fa-book-open"
+          type: "fontawesome"
+        - name: "Bộ dữ liệu Hugging Face (6 bảng)"
+          url: "https://huggingface.co/datasets/nquocdat06/arxiv-harvester-data"
+          icon: "fa-solid fa-database"
+          type: "fontawesome"
+        - name: "Đặc tả Đồ án HCMUS"
+          url: "https://hcmus-cs-ta.github.io/lab-book/intro-ds/statement/"
+          icon: "fa-solid fa-graduation-cap"
+          type: "fontawesome"
