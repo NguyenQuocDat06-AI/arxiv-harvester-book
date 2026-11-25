@@ -1,5 +1,6 @@
-/* Giao diện báo cáo học thuật tối giản - _static/custom.css */
+/* Giao diện báo cáo học thuật tối giản (hỗ trợ đầy đủ Light / Dark / Auto Color Mode) */
 :root,
+html:not([data-theme]),
 html[data-theme="light"] {
   --ah-navy: #1b365d;
   --ah-navy-hover: #2c5282;
@@ -12,7 +13,8 @@ html[data-theme="light"] {
   --ah-rule-strong: #334155;
   --ah-rule-mid: #94a3b8;
   --ah-rule-light: #e2e8f0;
-  --ah-row-hover: rgba(27, 54, 93, 0.035);
+  --ah-row-hover: rgba(27, 54, 93, 0.04);
+  --ah-fig-bg: #ffffff;
 
   --pst-color-primary: #1b365d;
   --pst-color-primary-highlight: #2c5282;
@@ -20,21 +22,23 @@ html[data-theme="light"] {
   --pst-color-link: #1b365d;
   --pst-color-link-hover: #2c5282;
   --pst-color-inline-code: #1e293b;
+  --pst-color-table-row-hover-bg: rgba(27, 54, 93, 0.04);
 }
 
 html[data-theme="dark"] {
   --ah-navy: #93c5fd;
   --ah-navy-hover: #bfdbfe;
   --ah-text-main: #f1f5f9;
-  --ah-text-body: #cbd5e1;
+  --ah-text-body: #e2e8f0;
   --ah-text-muted: #94a3b8;
-  --ah-bg-page: #151c26;
-  --ah-bg-head: #1e293b;
-  --ah-bg-code: #1e293b;
+  --ah-bg-page: #14181e;
+  --ah-bg-head: #1e2633;
+  --ah-bg-code: #1e2633;
   --ah-rule-strong: #94a3b8;
   --ah-rule-mid: #64748b;
-  --ah-rule-light: rgba(148, 163, 184, 0.22);
-  --ah-row-hover: rgba(147, 197, 253, 0.07);
+  --ah-rule-light: rgba(148, 163, 184, 0.24);
+  --ah-row-hover: rgba(147, 197, 253, 0.08);
+  --ah-fig-bg: #f8fafc;
 
   --pst-color-primary: #93c5fd;
   --pst-color-primary-highlight: #bfdbfe;
@@ -42,6 +46,7 @@ html[data-theme="dark"] {
   --pst-color-link: #93c5fd;
   --pst-color-link-hover: #bfdbfe;
   --pst-color-inline-code: #e2e8f0;
+  --pst-color-table-row-hover-bg: rgba(147, 197, 253, 0.08);
 }
 
 .bd-article-container { max-width: 66rem; }
@@ -52,7 +57,7 @@ html[data-theme="dark"] {
   line-height: 1.72;
 }
 
-.bd-article h1, .bd-article h2, .bd-article h3 {
+.bd-article h1, .bd-article h2, .bd-article h3, .bd-article h4 {
   color: var(--ah-text-main);
   letter-spacing: -0.01em;
 }
@@ -99,7 +104,23 @@ html[data-theme="dark"] {
   color: var(--ah-navy);
 }
 
-/* Bảng học thuật kiểu booktabs (không bóng đổ, không thanh màu nền, không cột dọc) */
+/* Căn thẳng hàng đầu ra Jupyter và gỡ bỏ hộp nền xám sáng mặc định của PyData ở chế độ Tối */
+.bd-article div.cell_output {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+html[data-theme="dark"] .bd-content div.cell_output .text_html,
+html[data-theme="dark"] .bd-content div.cell_output .text_html:not(:has(table.dataframe)),
+html[data-theme="dark"] .bd-content .nboutput .output_area.rendered_html,
+html[data-theme="dark"] .bd-content .nboutput .output_area.rendered_html:not(:has(table.dataframe)) {
+  background-color: transparent !important;
+  color: var(--ah-text-body) !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* Bảng học thuật kiểu booktabs đồng nhất ở cả Light Mode và Dark Mode */
 .bd-article .ah-table-scroll,
 .bd-article .pst-scrollable-table-container {
   margin: 0.9rem 0 1.45rem 0;
@@ -110,6 +131,7 @@ html[data-theme="dark"] {
 }
 
 .bd-content .bd-article table.ah-clean-table,
+.bd-content div.cell_output table.dataframe.ah-clean-table,
 .bd-content .bd-article table.table {
   width: 100%;
   margin-bottom: 0 !important;
@@ -121,8 +143,17 @@ html[data-theme="dark"] {
   font-size: 0.835rem;
   font-variant-numeric: tabular-nums lining-nums;
   color: var(--ah-text-body) !important;
+  background-color: transparent !important;
   --bs-table-striped-bg: transparent !important;
   --bs-table-bg: transparent !important;
+  --bs-table-color: var(--ah-text-body) !important;
+}
+
+.bd-content div.cell_output table.dataframe td ~ td,
+.bd-content div.cell_output table.dataframe td ~ th,
+.bd-content div.cell_output table.dataframe th ~ td,
+.bd-content div.cell_output table.dataframe th ~ th {
+  border-left: none !important;
 }
 
 .bd-article table.ah-clean-table caption,
@@ -131,11 +162,20 @@ html[data-theme="dark"] {
   padding: 0 0 0.45rem 0;
   font-weight: 600;
   font-size: 0.865rem;
-  color: var(--ah-text-main);
+  color: var(--ah-text-main) !important;
+  background-color: transparent !important;
   text-align: left;
 }
 
+.bd-content .bd-article table.ah-clean-table thead tr,
+.bd-content div.cell_output table.dataframe thead tr,
+.bd-content .bd-article table.table thead tr {
+  background-color: var(--ah-bg-head) !important;
+  border-bottom: 1px solid var(--ah-rule-mid) !important;
+}
+
 .bd-content .bd-article table.ah-clean-table thead th,
+.bd-content div.cell_output table.dataframe thead th,
 .bd-content .bd-article table.table thead th {
   background-color: var(--ah-bg-head) !important;
   color: var(--ah-text-main) !important;
@@ -151,11 +191,13 @@ html[data-theme="dark"] {
 }
 
 .bd-content .bd-article table.ah-clean-table tbody tr,
+.bd-content div.cell_output table.dataframe tbody tr,
 .bd-content .bd-article table.table tbody tr {
   background-color: transparent !important;
 }
 
 .bd-content .bd-article table.ah-clean-table tbody td,
+.bd-content div.cell_output table.dataframe tbody td,
 .bd-content .bd-article table.table tbody td {
   padding: 0.42rem 0.48rem !important;
   border: none !important;
@@ -168,11 +210,13 @@ html[data-theme="dark"] {
 }
 
 .bd-content .bd-article table.ah-clean-table tbody tr:last-child td,
+.bd-content div.cell_output table.dataframe tbody tr:last-child td,
 .bd-content .bd-article table.table tbody tr:last-child td {
   border-bottom: none !important;
 }
 
 .bd-content .bd-article table.ah-clean-table tbody tr:hover td,
+.bd-content div.cell_output table.dataframe tbody tr:hover td,
 .bd-content .bd-article table.table tbody tr:hover td {
   background-color: var(--ah-row-hover) !important;
 }
@@ -202,7 +246,8 @@ html[data-theme="dark"] {
   word-break: break-all;
 }
 
-.bd-article div.admonition {
+/* Khung ghi chú tối giản, không để icon tròn đè lên chữ tiêu đề */
+.bd-article div.admonition:not(.hide) {
   border-radius: 4px;
   border: 1px solid var(--ah-rule-light);
   border-left: 3px solid var(--ah-navy);
@@ -212,43 +257,77 @@ html[data-theme="dark"] {
   padding: 0.8rem 1.05rem;
 }
 
-.bd-article div.admonition > p.admonition-title {
+.bd-article div.admonition:not(.hide) > p.admonition-title {
   background-color: transparent !important;
+  color: var(--ah-text-main) !important;
+  text-shadow: none !important;
   font-weight: 650;
   font-size: 0.92rem;
-  padding: 0 0 0.25rem 0;
+  padding: 0 0 0.25rem 0 !important;
   margin-bottom: 0.2rem;
 }
 
+.bd-article div.admonition:not(.hide) > p.admonition-title::before,
+.bd-article div.admonition:not(.hide) > p.admonition-title::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Nút mở mã nguồn và khối mã Python tương thích cả Sáng & Tối */
 .bd-article details.admonition.hide.above-input {
-  border: none;
-  background: transparent;
-  padding: 0;
-  margin: 0.3rem 0 0.5rem 0;
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0.35rem 0 0.55rem 0 !important;
 }
 
 .bd-article details.admonition.hide.above-input > summary {
-  display: inline-flex;
+  display: inline-flex !important;
   align-items: center;
-  padding: 0.2rem 0.6rem;
+  padding: 0.22rem 0.65rem !important;
   border-radius: 4px;
-  border: 1px solid var(--ah-rule-light);
-  background-color: var(--ah-bg-head);
-  font-size: 0.78rem;
-  color: var(--ah-text-muted);
+  border: 1px solid var(--ah-rule-light) !important;
+  background-color: var(--ah-bg-head) !important;
+  font-size: 0.79rem;
+  color: var(--ah-text-muted) !important;
   cursor: pointer;
 }
 
-.bd-content .bd-article .cell_output img {
+.bd-article details.admonition.hide > summary span,
+html[data-theme="dark"] .bd-article details.hide summary span {
+  color: inherit !important;
+}
+
+.bd-article div.cell > div.cell_input,
+.bd-article details.admonition.hide[open] div.cell_input {
+  background-color: var(--ah-bg-head) !important;
+  border: 1px solid var(--ah-rule-light) !important;
+  border-left: 3px solid var(--ah-navy) !important;
+  border-radius: 4px !important;
+  margin-top: 0.4rem !important;
+}
+
+.bd-article div.cell_input div.highlight {
+  background-color: transparent !important;
+}
+
+/* Biểu đồ matplotlib giữ nền sáng dịu mắt, không bị bộ lọc brightness(.8) làm xỉn màu ở chế độ Tối */
+.bd-content .bd-article .cell_output img,
+html[data-theme="dark"] .bd-content .bd-article .cell_output img {
   display: block;
   max-width: 100%;
   height: auto;
   margin: 0.85rem auto;
-  padding: 0.4rem !important;
-  background-color: #ffffff !important;
-  border: 1px solid var(--ah-rule-light);
+  padding: 0.45rem !important;
+  background-color: var(--ah-fig-bg) !important;
+  border: 1px solid var(--ah-rule-light) !important;
   border-radius: 4px !important;
   box-shadow: none !important;
+  filter: none !important;
+}
+
+html[data-theme="dark"] .bd-content .bd-article .cell_output img {
+  filter: brightness(0.95) !important;
 }
 
 .ah-footer-note {
